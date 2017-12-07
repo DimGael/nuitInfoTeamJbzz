@@ -70,7 +70,7 @@ if(!isset($_POST['joueur1']) && !isset($_SESSION['joueur1'])){ ?>
 
 ?>
   <p><?php echo   $_SESSION['defis'][$_SESSION['compteur']]->getLibDefi(); ?></p>
-  
+
   <p> Cliquez sur le gagnant!</p>
 
   <form action="index.php?page=5" method="post">
@@ -115,4 +115,19 @@ $_SESSION['compteur']++;
         <p>Le joueur <?php echo rand(1,5) ?> sera SAM ce soir! </p>
 
         <?php
+        unset($_SESSION['joueur1']);
+        unset($_SESSION['joueur2']);
+        unset($_SESSION['joueur3']);
+        unset($_SESSION['joueur4']);
+        unset($_SESSION['joueur5']);
+
+        unset($_SESSION['scorej1']);
+        unset($_SESSION['scorej2']);
+        unset($_SESSION['scorej3']);
+        unset($_SESSION['scorej4']);
+        unset($_SESSION['scorej5']);
+
+        unset($_SESSION['compteur']);
+
+        unset($_SESSION['defis']);
     } ?>
