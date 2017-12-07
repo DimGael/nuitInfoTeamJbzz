@@ -13,6 +13,7 @@
 	if(!empty($infos)){
 		if($mdp == $infos->getMdp()){
 			echo "<h1>Vous êtes connecté !</h1>";
+			$_SESSION['connexion'] = $infos;
 		}
 		else {
 			echo "<h1>Erreur !</h1>";
