@@ -20,9 +20,8 @@
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Evénement<span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="#">Ajouter événement</a></li>
-            <li><a href="#">Lister événement</a></li>
-            <li><a href="#">Recherche événement</a></li>
+            <li><a href="./index.php?page=6">Ajouter événement</a></li>
+            <li><a href="./index.php?page=7">Lister événement</a></li>
           </ul>
         </li>
         <li class="dropdown">
