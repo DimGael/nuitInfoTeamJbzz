@@ -43,6 +43,24 @@ class MessagesManager{
 
 		return $message;
 	}
+
+  public function getNbMessages($id){
+		$sql = "SELECT uti_pseudo, mes_id, u.uti_id, eve_id, mes_lib, mes_date FROM message m
+            JOIN utilisateur u on m.uti_id=u.uti_id
+            WHERE eve_id = :idEve";
+
+		$req = $this->db->prepare($sql);
+
+		$req->bindParam(':idEve', $id);
+
+		$req->execute();
+
+		$nbLignes = $req->rowCount();
+
+    $req->closeCursor();
+
+		return $nbLignes;
+	}
 }
 
 

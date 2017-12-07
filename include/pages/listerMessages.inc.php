@@ -9,6 +9,9 @@
 	<h1>Forum de l'évènement</h1><?php  ?>
 	<br />
 
+  <?php if($MessagesManager->getNbMessages($idEve) == 0){ ?>
+    <p>Soyez le premier à commenter !</p>
+  <?php }else{ ?>
 	<table id="listerMessages">
 	<tr><th>Message</th><th>Date</th><th>Par :</th>
 	<?php
@@ -22,8 +25,8 @@
 	<?php } ?>
 	</table>
 	<br />
-
-<?php if(!empty($_SESSION['connexion'])){ ?>
+<?php }
+if(!empty($_SESSION['connexion'])){ ?>
 
   <form action="index.php?page=10&id=<?php echo $idEve; ?>" method="post">
     <input type="textarea" id="message" name="message" />
@@ -35,11 +38,11 @@
     $id = $infos->getId();
 
     if($MessagesManager->add($_POST['message'], $id, $idEve) == 1){ ?>
-      <p>Insertion réussie !</p>
-      <?php header("refresh:0; url=index.php?page=10&id=$idEve");?>
-    <?php }else{ ?>
-      <p>Erreur !</p>
-    <?php }
-  }
+        <p>Insertion réussie !</p>
+        <?php header("refresh:0; url=index.php?page=10&id=$idEve");?>
+      <?php }else{ ?>
+        <p>Erreur !</p>
+      <?php }
+      }
 }
   ?>
