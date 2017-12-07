@@ -14,8 +14,6 @@ case 0:
 	// inclure ici la page accueil photo
 	include_once('pages/accueil.inc.php');
 	break;
-default : 	include_once('pages/accueil.inc.php');
-}
 
 case 1 : include_once('pages/creerCompte.inc.php');
 break;
@@ -28,7 +26,8 @@ break;
 
 case 4 : include_once('pages/seConnecterCible.inc.php');
 break;
+default : 	include_once('pages/accueil.inc.php');
 
-
+}
 ?>
 </div>
