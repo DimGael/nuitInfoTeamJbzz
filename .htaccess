@@ -1,0 +1,12 @@
+ErrorDocument 400 http://www.siteduzero.com/400.php
+ErrorDocument 401 http://www.siteduzero.com/401.php
+ErrorDocument 402 http://www.siteduzero.com/402.php
+ErrorDocument 403 http://www.siteduzero.com/403.php
+ErrorDocument 404 http://localhost/nuitDeLinfo/nuitInfoTeamJbzz/index.php?page=404
+ErrorDocument 405 http://www.siteduzero.com/405.php
+ErrorDocument 500 http://www.siteduzero.com/500.php
+ErrorDocument 501 http://www.siteduzero.com/501.php
+ErrorDocument 502 http://www.siteduzero.com/502.php
+ErrorDocument 503 http://www.siteduzero.com/503.php
+ErrorDocument 504 http://www.siteduzero.com/504.php
+ErrorDocument 505 http://www.siteduzero.com/505.php
