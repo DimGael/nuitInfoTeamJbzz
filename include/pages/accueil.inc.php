@@ -7,14 +7,11 @@
      <center><h1>Prévention routière</h1></center>
      <br>
 
-     <div class="col-md-4">
-       <p> COUCOU </p>
+     <div class="col-md-4 col-md-offset-2">
+        <center><button type="button" class="bouton bouton1">S'inscrire</button></center>
      </div>
      <div class="col-md-4">
-       <p> COUCOU </p>
-     </div>
-     <div class="col-md-4">
-       <p> COUCOU </p>
+       <center><button type="button" class="bouton bouton2">Connexion</button></center>
      </div>
    </div>
  </div>
