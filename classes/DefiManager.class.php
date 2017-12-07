@@ -14,22 +14,24 @@ class DefiManager{
     $rand2 = rand(3,4);
 
     $sql = 'SELECT def_id, def_lib FROM defis WHERE def_id = :rand1';
-    $requete->bindValue(':rand1', $rand1);
+
     $requete = $this->db->prepare($sql);
+      $requete->bindValue(':rand1', $rand1);
     $requete->execute();
 
-    $listeDefis[] = new Defi($requete->fetch(PDO::FETCH_OBJ))
+    $listeDefis[] = new Defi($requete->fetch(PDO::FETCH_OBJ));
 
-    $sql = 'SELECT def_id, def_lib FROM defis WHERE def_id = :rand2';
+    $sql1 = 'SELECT def_id, def_lib FROM defis WHERE def_id = :rand2';
+    $requete = $this->db->prepare($sql1);
     $requete->bindValue(':rand2', $rand2);
-    $requete = $this->db->prepare($sql);
     $requete->execute();
 
-    $listeDefis[] = new Defi($requete->fetch(PDO::FETCH_OBJ))
+    $listeDefis[] = new Defi($requete->fetch(PDO::FETCH_OBJ));
 
-    $sql = 'SELECT def_id, def_lib FROM defis WHERE def_id BETWEEN 5 AND 8';
+    $sql2 = 'SELECT def_id, def_lib FROM defis WHERE def_id BETWEEN 5 AND 8';
+    $requete = $this->db->prepare($sql2);
     $requete->bindValue(':rand1', $rand1);
-    $requete = $this->db->prepare($sql);
+
     $requete->execute();
 
 		while($defi = $requete->fetch(PDO::FETCH_OBJ)){
@@ -38,8 +40,6 @@ class DefiManager{
     $requete->closeCursor();
     return $listeDefis;
 }
-
-
-
+}
 
  ?>
