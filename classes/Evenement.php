@@ -48,14 +48,7 @@ class Compte{
 		}
 	}
 
-
-  private ;
-  private ;
-  private ;
-  private ;
-  private ;
-
-	//id Evenement
+  //id Evenement
 	public function getIdEve(){
 		return $this->idEve;
 	}
