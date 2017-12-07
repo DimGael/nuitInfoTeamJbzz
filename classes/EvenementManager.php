@@ -57,6 +57,20 @@ class EvenementManager{
 			return $listeEvenement;
     }
 
+    public function getNbEvenements(){
+      $sql = "SELECT * FROM evenement";
+
+      $requete = $this->db->prepare($sql);
+      $requete->execute();
+
+      $requete->closeCursor();
+
+      $nbligne = $requete->rowCount();
+
+      return $nbligne;
+    }
+
+
 }
 
 
