@@ -1,11 +1,10 @@
 <?php
 			$pdo=new Mypdo();
 			$evenementManager = new $EvenementManager($pdo);
-			$personne = $personneManager -> getAllpersonne();
-			$nbPersonne = $personneManager -> getNbPersonne();
+			$evenements = $evenementManager -> getAllEvenements();
 				?>
 
-				<h1>Liste des personnes enregistrées</h1>
+				<h1>Liste des evenements enregistrés</h1>
 
 				<p>Actuellement <?php echo $nbPersonne; ?> personnes sont enregistrées</p>
 				<br />

@@ -57,7 +57,7 @@ class EvenementManager{
 			return $listeEvenement;
     }
 
-    public function getUnEvenements($idEve){
+    public function getNbEvenements(){
       $sql = "SELECT * FROM evenement";
 
       $requete = $this->db->prepare($sql);
