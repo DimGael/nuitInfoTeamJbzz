@@ -1,9 +1,10 @@
 
 	<?php
-		if(!empty($_SESSION['connexion'])){
+		if(estConnecte()){
 			echo "<h1>Erreur !</h1>";
 			echo "<p>Vous êtes déjà connecté ! </p>";
 			header("Refresh:2,url='./index.php?page=0'");
+			exit();
 		}
 		else {
 	?>

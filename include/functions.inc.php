@@ -6,4 +6,8 @@ function hashMdp($mdp){
 	return hash('sha256', $mdp);
 }
 
+function estConnecte(){
+	return isset($_SESSION['connexion']);
+}
+
 ?>
