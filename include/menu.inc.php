@@ -1,6 +1,6 @@
 <!-- Static navbar -->
 <?php
-  if(estConnecte()){
+  if(!empty($_SESSION['connexion'])){
     $infos = ($_SESSION['connexion']);
 
 ?>
@@ -17,17 +17,20 @@
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav navbar-left">
-        <li><a href="./index.php">Accueil</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Evénement<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Ajouter événement</a></li>
+            <li><a href="#">Lister événement</a></li>
+            <li><a href="#">Recherche événement</a></li>
+          </ul>
+        </li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Prévention<span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="#">Premiers gestes</a></li>
+            <li><a href="#">Gestes qui sauvent</a></li>
             <li><a href="#">Numéros d'urgence</a></li>
             <li><a href="#"></a></li>
-            <li role="separator" class="divider"></li>
-            <li class="dropdown-header">Super</li>
-            <li><a href="#">Lien</a></li>
-            <li><a href="#">Autre lien</a></li>
           </ul>
         </li>
       </ul>
@@ -55,21 +58,6 @@
          <a class="navbar-brand" href="#">Prev'Agile</a>
        </div>
        <div id="navbar" class="navbar-collapse collapse">
-         <ul class="nav navbar-nav navbar-left">
-           <li><a href="./index.php">Accueil</a></li>
-           <li class="dropdown">
-             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Prévention<span class="caret"></span></a>
-             <ul class="dropdown-menu">
-               <li><a href="#">Premiers gestes</a></li>
-               <li><a href="#">Numéros d'urgence</a></li>
-               <li><a href="#"></a></li>
-               <li role="separator" class="divider"></li>
-               <li class="dropdown-header">Super</li>
-               <li><a href="#">Lien</a></li>
-               <li><a href="#">Autre lien</a></li>
-             </ul>
-           </li>
-         </ul>
          <ul class="nav navbar-nav navbar-right">
 
            <li><a href="./index.php?page=1">S'inscrire</a></li>
