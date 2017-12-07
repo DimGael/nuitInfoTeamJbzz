@@ -1,5 +1,15 @@
+<?php
+$pdo = new Mypdo();
 
+/*
+$votemanager = new VoteManager($pdo);
 
+$votemanager->add(new Vote(array(
+	'cit_num' => $_SESSION['cit'],
+	'per_num' => $_SESSION['numPersonneConnecte'],
+	'vot_valeur' => $_POST['vote']
+)));*/
+?>
 
 
 <h1> Compte créé ! </h1>
