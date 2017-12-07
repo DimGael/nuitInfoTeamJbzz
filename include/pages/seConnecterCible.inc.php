@@ -4,7 +4,7 @@
 	//$_POST['mdp']
 
 	//Cas réussite de la connexion
-	if(true){
+	if(false){
 		?>
 
 		<h1>Connecté</h1>
@@ -13,11 +13,11 @@
 		</p>
 
 		<?php
-		header("Refresh:2; index.php?page=0");
+		Header("Refresh:2;index.php?page=0");
 		exit();
 	}
 	else{
-		header("Location=index.php?page=4&connexion=1");
+		Header("Location:index.php?page=4&connexion=1");
 		exit();
 	}
 ?>
