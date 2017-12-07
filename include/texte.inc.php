@@ -17,5 +17,11 @@ case 0:
 default : 	include_once('pages/accueil.inc.php');
 }
 
+case 1 : include_once('pages/creerCompte.inc.php');
+break;
+
+case 2 : include_once('pages/finCreerCompte.inc.php');
+break;
+
 ?>
 </div>

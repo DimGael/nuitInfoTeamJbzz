@@ -1,5 +1,6 @@
 <h1> Creer un compte </h1>
 
+<form method="post" action="index.php?page=2">
 	Nom : <input type="texte" name="nom" value="nom" required="true" autofocus ="true" mexlenght="30"><br>
 	Prénom : <input type="texte" name="prenom" value="prenom" required="true" mexlenght="30"><br>
 	Pseudo : <input type="texte" name="pseudo" value="pseudo" required="true" mexlenght="30"><br>
@@ -7,4 +8,4 @@
 	<br>
 
 	<input type="submit" value="Envoyer">
-
+<form>
