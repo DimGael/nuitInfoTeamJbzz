@@ -57,7 +57,7 @@
 
           <center><h1>Prévention routière</h1></center>
           <br>
-          
+
           <div class="col-md-4">
             <p> COUCOU </p>
           </div>
@@ -74,7 +74,7 @@
 
   <footer class="footer">
     <div class="container">
-      <p class="text-muted">Nuit de l'info - Team JBZZ - IUT du Limosuin</p>
+      <p class="text-muted">Nuit de l'info - Team JBZZ - IUT du Limousin</p>
     </div>
 
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
