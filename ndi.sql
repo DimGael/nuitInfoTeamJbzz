@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  jeu. 07 déc. 2017 à 20:53
+-- Généré le :  jeu. 07 déc. 2017 à 21:07
 -- Version du serveur :  5.7.19
 -- Version de PHP :  5.6.31
 
@@ -134,7 +134,7 @@ CREATE TABLE IF NOT EXISTS `utilisateur` (
   `uti_prenom` varchar(20) DEFAULT NULL,
   `uti_email` varchar(100) DEFAULT NULL,
   `uti_pseudo` varchar(20) DEFAULT NULL,
-  `uti_mdp` varchar(30) DEFAULT NULL,
+  `uti_mdp` text,
   PRIMARY KEY (`uti_id`),
   UNIQUE KEY `uti_email` (`uti_email`),
   UNIQUE KEY `uti_pseudo` (`uti_pseudo`)

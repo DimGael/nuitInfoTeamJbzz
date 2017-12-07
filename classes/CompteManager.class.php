@@ -38,6 +38,10 @@ class CompteManager{
 		return $compte;
 	}
 
+	//Retourne vrai si le pseudo existe déjà
+	public function existeDejaPseudo($pseudo){
+		return !is_null($this->getComptePseudo($pseudo));
+	}
 
 }
 
