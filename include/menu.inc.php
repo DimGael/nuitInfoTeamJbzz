@@ -13,7 +13,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">Prev'Agile</a>
+      <a class="navbar-brand" href="./index.php?page=0">Prev'Agile</a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav navbar-left">
@@ -31,6 +31,13 @@
             <li><a href="#">Gestes qui sauvent</a></li>
             <li><a href="#">Numéros d'urgence</a></li>
             <li><a href="#">Risques</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Signalement<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Lister signalements</a></li>
+            <li><a href="#">Ajouter signalement</a></li>
           </ul>
         </li>
       </ul>
@@ -53,7 +60,7 @@
            <span class="icon-bar"></span>
            <span class="icon-bar"></span>
          </button>
-         <a class="navbar-brand" href="#">Prev'Agile</a>
+         <a class="navbar-brand" href="./index.php?page=0">Prev'Agile</a>
        </div>
        <div id="navbar" class="navbar-collapse collapse">
          <ul class="nav navbar-nav navbar-right">
