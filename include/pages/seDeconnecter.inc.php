@@ -1,10 +1,10 @@
-<?php 
+<?php
 
-	
+
 	if(!estConnecte()){
 		?>
 		<h1>Erreur !</h1>
-		<p>Vous êtes déjà connecté ! </p>		
+		<p>Vous êtes déjà connecté ! </p>
 		<?php
 		header("Refresh:2,url='./index.php?page=0'");
 		exit();
