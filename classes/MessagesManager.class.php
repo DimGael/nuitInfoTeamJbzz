@@ -7,20 +7,20 @@ class MessagesManager{
 			$this->db = $db;
 	}
 
-/*
-	public function add($compte){
-			$sql = "INSERT INTO utilisateur (uti_nom, uti_prenom, uti_pseudo, uti_mdp, uti_email)
-					VALUES(:nom, :prenom, :pseudo, :mdp, :email)";
-			$req = $this->db->prepare($sql);
 
-			return $req->execute(array(
-				'nom' => $compte->getNom(),
-				'prenom' => $compte->getPrenom(),
-				'pseudo' => $compte->getPseudo(),
-				'mdp' => $compte->getMdp(),
-				'email' => $compte->getEmail()
-			));
-		}*/
+  public function add($message, $id, $idEve){
+          $requete = $this->db->prepare(
+            'INSERT INTO message (uti_id, eve_id, mes_lib, mes_date) VALUES (:idPers, :eveId, :Mess, :dateMes)');
+
+            $requete->bindValue(':eveId', $idEve);
+            $requete->bindValue(':idPers', $id);
+            $requete->bindValue(':Mess', $message);
+            $requete->bindValue(':dateMes', date("Y-m-d H:i:s"));
+
+            $retour=$requete->execute();
+
+            return $retour;
+  }
 
 	public function getAllMessages($id){
     $message = array();
