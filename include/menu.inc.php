@@ -1,6 +1,6 @@
 <!-- Static navbar -->
 <?php
-  if(!empty($_SESSION['connexion'])){
+  if(estConnecte()){
     $infos = ($_SESSION['connexion']);
 
 ?>
