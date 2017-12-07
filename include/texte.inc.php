@@ -30,6 +30,15 @@ break;
 case 5 : include_once('pages/jeu.inc.php');
 break;
 
+case 6 : include_once('pages/creerEvenement.inc.php');
+break;
+
+case 7 : include_once('pages/listerEvenement.inc.php');
+break;
+
+case 8 : include_once('pages/detailsEvenement.inc.php');
+break;
+
 default : 	include_once('pages/accueil.inc.php');
 
 }
