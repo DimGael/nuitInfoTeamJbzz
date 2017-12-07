@@ -17,7 +17,7 @@ class Defi{
 					break;
 
 				case 'def_lib':
-					$this->setIdLib($valeur);
+					$this->setLibDefi($valeur);
 					break;
 
 			}
@@ -43,5 +43,5 @@ class Defi{
 	public function setLibDefi($lib){
 		$this->libDefi = $lib;
 	}
-
+}
 ?>
