@@ -57,6 +57,14 @@ break;
 case 14 : include_once('pages/creerEvenementCible.inc.php');
 break;
 
+
+
+
+
+
+case 404 : include_once('pages/error404.inc.php');
+break;
+
 default : 	include_once('pages/accueil.inc.php');
 
 }
