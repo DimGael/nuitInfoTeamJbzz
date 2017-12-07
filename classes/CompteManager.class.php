@@ -33,9 +33,11 @@ class CompteManager{
 
 		while ($valeurCompte = $req->fetch(PDO::FETCH_OBJ)) {
 			$compte = new Compte($valeurCompte);
+
+			return $compte;
 		}
 
-		return $compte;
+		return NULL;
 	}
 
 	public function getCompteMail($mail){
@@ -49,10 +51,11 @@ class CompteManager{
 
 		while ($valeurCompte = $req->fetch(PDO::FETCH_OBJ)) {
 			$compte = new Compte($valeurCompte);
+			return $compte;
 		}
 
-		return $compte;
-
+		return NULL;
+	}
 	//Retourne vrai si le pseudo existe déjà
 	public function existeDejaPseudo($pseudo){
 		return !is_null($this->getComptePseudo($pseudo));
@@ -62,6 +65,4 @@ class CompteManager{
 }
 
 
-
-
- ?>
+?>
