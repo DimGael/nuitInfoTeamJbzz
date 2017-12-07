@@ -22,7 +22,21 @@ class CompteManager{
 			));
 		}
 
+	public function getComptePseudo($pseudo){
+		$sql = "SELECT uti_id, uti_nom, uti_prenom, uti_pseudo, uti_mdp, uti_email FROM utilisateur WHERE uti_pseudo = :pseudo";
 
+		$req = $this->db->prepare($sql);
+
+		$req->bindParam(':pseudo', $pseudo, PDO::PARAM_STR);
+
+		$req->execute();
+
+		while ($valeurCompte = $req->fetch(PDO::FETCH_OBJ)) {
+			$compte = new Compte($valeurCompte);	
+		}
+
+		return $compte;
+	}
 
 
 }

@@ -7,7 +7,7 @@
 
 	<?php
 		if(isset($_GET['connexion'])){
-			echo "<em>Erreur login ou mot de passe incorrect</em>";
+			echo "<em>Erreur, login ou mot de passe incorrect</em>";
 
 			echo "<br> <br>";
 		}

@@ -3,6 +3,8 @@
 	//$_POST['login']
 	//$_POST['mdp']
 
+	//Connexion
+
 	//Cas réussite de la connexion
 	if(false){
 		?>
@@ -17,7 +19,8 @@
 		exit();
 	}
 	else{
-		Header("Location:index.php?page=4&connexion=1");
+
+		Header("Refresh:1;index.php?page=3&connexion=1");
 		exit();
 	}
 ?>
