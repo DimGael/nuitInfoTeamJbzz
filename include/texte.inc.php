@@ -42,6 +42,9 @@ break;
 case 9 : include_once('pages/seDeconnecter.inc.php');
 break;
 
+case 10 : include_once('pages/listerMessages.inc.php');
+break;
+
 default : 	include_once('pages/accueil.inc.php');
 
 }

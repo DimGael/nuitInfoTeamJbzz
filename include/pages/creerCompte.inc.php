@@ -10,3 +10,6 @@
 
 	<input type="submit" value="Envoyer">
 <form>
+	<?php
+
+	?>
