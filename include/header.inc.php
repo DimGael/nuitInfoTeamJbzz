@@ -16,4 +16,5 @@ session_start();
   <link href="css/moncss.css" rel="stylesheet">
 
      <?php require_once("include/menu.inc.php"); ?>
+     <body>
      <div class="debut">
