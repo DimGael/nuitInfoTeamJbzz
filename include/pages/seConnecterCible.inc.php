@@ -1,35 +1,34 @@
 <?php
 
-	$pdo = new Mydpo();
+	$pdo = new Mypdo();
 	$compteManager = new CompteManager($pdo);
-	//$_POST['login']
-	//$_POST['mdp']
-
 	//Connexion
-
+	$login = htmlspecialchars($_POST['login']);
+	$mdp = htmlspecialchars($_POST['mdp']);
+	$sel = "S3rD0cH3_L3_S3L";
+	$mdp = $sel.$mdp;
+	$mdp = hash('sha256', $mdp);
+	$infos = $compteManager->getComptePseudo($login);
 	//On vérifie si le login existe dans la bdd
-	if(!$compteManager->existeDejaPseudo($_POST['login'])){
+	if(!empty($infos)){
+		if($mdp == $infos->getMdp()){
+			echo "<h1>Vous êtes connecté !</h1>";
+			$_SESSION['connexion'] = $infos;
+		}
+		else {
+			echo "<h1>Erreur !</h1>";
+			echo "<p> Le mot de passe entré est incorrect ! </p>";
+			erreurConnexion();
+		}
+	}
+	else{
+		echo "<h1>Erreur !</h1>";
+		echo "<p> Le pseudo entré est incorrect ! </p>";
 		erreurConnexion();
 	}
-
-	$compteConnexion = $compteManager->getComptePseudo();
-
-	if($compteConnexion->getMdp() !== $_POST['mdp']){
-		erreurConnexion();
-	}
-	?>
-
-	<h1>Connecté</h1>
-	<p>
-		Vous avez été connecté. <br> <br>Redirection en cours ...
-	</p>
-
-	<?php
-	Header("Refresh:2;index.php?page=0");
-	exit();
 
 	function erreurConnexion(){
-		Header("Refresh:1;index.php?page=3&connexion=1");
+		header("Refresh:2;index.php?page=3&connexion=1");
 		exit();
 	}
 ?>

@@ -1,6 +1,6 @@
 <?php
 
-class Compte{
+class Evenement{
 
 	private $idEve;
 	private $idUti;
@@ -53,7 +53,7 @@ class Compte{
 		return $this->idEve;
 	}
 
-	public function setNom($idEve){
+	public function setIdEve($idEve){
 		$this->idEve = $idEve;
 	}
 
