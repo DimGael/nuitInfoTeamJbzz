@@ -39,6 +39,9 @@ break;
 case 8 : include_once('pages/detailsEvenement.inc.php');
 break;
 
+case 9 : include_once('pages/seDeconnecter.inc.php');
+break;
+
 default : 	include_once('pages/accueil.inc.php');
 
 }
