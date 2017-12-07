@@ -45,6 +45,9 @@ break;
 case 10 : include_once('pages/listerMessages.inc.php');
 break;
 
+case 11 : include_once('pages/detailsEvenement.inc.php');
+break;
+
 default : 	include_once('pages/accueil.inc.php');
 
 }
