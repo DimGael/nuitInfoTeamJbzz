@@ -27,8 +27,11 @@ break;
 case 4 : include_once('pages/seConnecterCible.inc.php');
 break;
 
+<<<<<<< HEAD
 case 5 : include_once('pages/jeu.inc.php');
 break;
+=======
+>>>>>>> a25d13d864eff2a3f6f5ebe47be3300e4b708f3e
 
 default : 	include_once('pages/accueil.inc.php');
 

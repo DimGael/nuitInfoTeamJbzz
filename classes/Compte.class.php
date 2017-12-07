@@ -1,10 +1,13 @@
 <?php
 
 class Compte{
+
+	private $id;
 	private $nom;
 	private $prenom;
 	private $pseudo;
 	private $mdp;
+	private $email;
 
 
 	public function __construct($valeurs){
@@ -14,20 +17,27 @@ class Compte{
 	public function hydrate($valeurs){
 		foreach ($valeurs as $attribut => $valeur) {
 			switch ($attribut) {
-				case 'uti_nom':
-					$this->setNumero($valeur);
+				case 'uti_id':
+					$this->setId($valeur);
 					break;
 
-				case 'uti_prenom':
+				case 'uti_nom':
 					$this->setNom($valeur);
 					break;
 
-				case 'uti_pseudo':
+				case 'uti_prenom':
 					$this->setPrenom($valeur);
 					break;
 
+				case 'uti_pseudo':
+					$this->setPseudo($valeur);
+					break;
+
 				case 'uti_mdp':
-					$this->setTelephone($valeur);
+					$this->setMdp($valeur);
+					break;
+				case 'uti_email':
+					$this->setEmail($valeur);
 					break;
 			}
 		}
@@ -71,6 +81,25 @@ class Compte{
 	public function setMdp($mdp){
 		$this->mdp = $mdp;
 	}
+
+	//email
+	public function getEmail(){
+		return $this->email;
+	}
+
+	public function setEmail($email){
+		$this->email = $email;
+	}
+
+	//id
+	public function getId()){
+		return $this->id;
+	}
+
+	public function setId($id){
+		$this->id = $id;
+	}
+
 
 }
 
