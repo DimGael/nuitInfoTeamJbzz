@@ -18,8 +18,8 @@ class EvenementManager{
 				'titre' => $evenement->getTitre(),
 				'description' => $evenement->getDescription(),
 				'risque' => $evenement->getRisque(),
-        		'lieu' => $evenement->getLieu(),
-        		'dateEve' => $evenement->getDate()
+        'lieu' => $evenement->getLieu(),
+        'dateEve' => $evenement->getDate()
 			));
 		}
 

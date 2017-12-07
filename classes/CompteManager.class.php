@@ -22,11 +22,31 @@ class CompteManager{
 		}
 
 	public function getComptePseudo($pseudo){
-		$sql = "SELECT uti_id, uti_nom, uti_prenom, uti_pseudo, uti_mdp, uti_email FROM utilisateur WHERE uti_pseudo = :pseudo";
+		$sql = "SELECT uti_id, uti_nom, uti_prenom, uti_pseudo, uti_mdp, uti_email
+		FROM utilisateur WHERE uti_pseudo = :pseudo";
 
 		$req = $this->db->prepare($sql);
 
-		$req->bindParam(':pseudo', $pseudo, PDO::PARAM_STR);
+		$req->bindValue(':pseudo', $pseudo);
+
+		$req->execute();
+
+		while ($valeurCompte = $req->fetch(PDO::FETCH_OBJ)) {
+			$compte = new Compte($valeurCompte);
+
+			return $compte;
+		}
+
+		return NULL;
+	}
+
+	public function getCompteId($id){
+		$sql = "SELECT uti_id, uti_nom, uti_prenom, uti_pseudo, uti_mdp, uti_email
+		FROM utilisateur WHERE uti_id = :id";
+
+		$req = $this->db->prepare($sql);
+
+		$req->bindValue(':id', $id);
 
 		$req->execute();
 
@@ -44,7 +64,7 @@ class CompteManager{
 
 		$req = $this->db->prepare($sql);
 
-		$req->bindParam(':mail', $mail, PDO::PARAM_STR);
+		$req->bindValue(':mail', $mail);
 
 		$req->execute();
 

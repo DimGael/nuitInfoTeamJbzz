@@ -1,26 +1,26 @@
 <?php
-			$pdo=new Mypdo();
-			$evenementManager = new $EvenementManager($pdo);
+			$pdo = new Mypdo();
+			$evenementManager = new EvenementManager($pdo);
+      $compteManager = new CompteManager($pdo);
 			$evenements = $evenementManager -> getAllEvenements();
 				?>
 
 				<h1>Liste des evenements enregistrés</h1>
 
-				<p>Actuellement <?php echo $nbPersonne; ?> personnes sont enregistrées</p>
+				<p>Actuellement <?php echo $evenementManager->getNbEvenements(); ?> evenements sont enregistrés</p>
 				<br />
-				<table id="listerPersonnes">
-					<tr><th>Numéro</th><th>Nom</th><th>Prénom</th>
+				<table id="listerEvenements">
+					<tr><th>Titre</th><th>Organisateur</th><th>Date</th><th>Risque</th><th>Lieu</th></tr>
 					<?php
-					foreach ($personne as $per){
-						$perNum = $per->getPerNum();
-						$perNom = $per->getPerNom();?>
-						<tr><td><b><a href="index.php?page=14&id=<?php echo $perNum.'&pernom='.$perNom;?>"><?php echo $perNum;?></a></b>
-						</td><td> <?php echo $perNom;?>
-						</td><td> <?php echo $per -> getPerPrenom();
-						if (isset($_SESSION['login']) && $_SESSION['est_admin'] == 1){?>
-						</td><td><a href="index.php?page=19&id=<?php echo $per -> getPerNum(); ?>"><img class="modifier" src="image/modifier.png" alt="Modifier la personne !" title="modifIcon"/></a>
-						<?php	}	?>
-						</td></tr>
+					foreach ($evenements as $eve){?>
+            <tr><td><?php echo $eve->getTitre();?>
+            </td><td><?php echo $compteManager->getCompteId($eve->getIdUti())->getPseudo();?>
+            </td><td><?php echo $eve->getDate();?>
+            </td><td><?php echo $eve->getRisque();?>
+            </td><td><?php echo $eve->getLieu();?>
+						</td><td><a href="index.php?page=2&id=<?php echo $eve->getIdEve(); ?>"><img class="modifier" src="img/modifier.png" alt="Modifier la personne !" title="modifIcon"/></a></td>
+
+            </tr>
 					<?php } ?>
 					</table>
 					<br />
