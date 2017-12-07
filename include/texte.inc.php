@@ -51,10 +51,15 @@ break;
 case 12 : include_once('pages/seDeconnecter.inc.php');
 break;
 
-case 13 : include_once('pages/creerEvenement.inc.php');
+case 13 : include_once('pages/creerEvenementCible.inc.php');
 break;
 
-case 14 : include_once('pages/creerEvenementCible.inc.php');
+
+
+
+
+
+case 404 : include_once('pages/error404.inc.php');
 break;
 
 default : 	include_once('pages/accueil.inc.php');
