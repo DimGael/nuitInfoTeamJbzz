@@ -2,7 +2,8 @@
 
 <p>Fais ce jeu pour déterminer SAM !</p>
 
-<?php if(!isset($_POST['joueur1'])){ ?>
+<?php
+if(!isset($_POST['joueur1']) && !isset($_SESSION['joueur1'])){ ?>
 
   <form action="index.php?page=5" method="post">
     <label>Nom du premier Joueur : </label><input type="text" name="joueur1" placeholder="Joueur 1" required /></br>
@@ -13,12 +14,14 @@
     <input type="submit" value="Valider !" />
   </form>
 
-<?php }else{
+<?php
+}else{
   $_SESSION['joueur1'] = $_POST['joueur1'];
   $_SESSION['joueur2'] = $_POST['joueur2'];
   $_SESSION['joueur3'] = $_POST['joueur3'];
   $_SESSION['joueur4'] = $_POST['joueur4'];
   $_SESSION['joueur5'] = $_POST['joueur5'];
+
 ?>
 
   <form action="index.php?page=5" method="post">
