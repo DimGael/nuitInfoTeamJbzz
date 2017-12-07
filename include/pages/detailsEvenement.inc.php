@@ -1,11 +1,15 @@
 	<?php
+		$id = $_GET['id'];
 		$db = new Mypdo();
 		$evenementmanager = new EvenementManager($db);
-		$listeevenement = $evenementmanager->getAllEvenements();
+		$detailevenement = $evenementmanager->getUnEvenement($id);
+
+
+
 	?>
 
 
-	<h1>Liste des événements</h1>
+	<h1>Détail d'un événement</h1>
 	<table>
 		<tr>
 			<th>Titre</th>
@@ -16,7 +20,7 @@
 		</tr>
 
 		<?php
-			foreach ($listeevenement as $evenement) {
+			foreach ($detailevenement as $evenement) {
 		?>
 				<tr>
 					<td> <?php echo $evenement->getTitre() ?> </td>
