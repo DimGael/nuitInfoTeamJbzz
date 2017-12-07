@@ -10,7 +10,7 @@
         <a href="./index.php?page=1"><center><button type="button" class="bouton bouton1">S'inscrire</button></center></a>
      </div>
      <div class="col-md-4">
-        <a href="./index.php?page=1"><center><button type="button" class="bouton bouton2">Connexion</button></center></a>
+        <a href="./index.php?page=3"><center><button type="button" class="bouton bouton2">Connexion</button></center></a>
      </div>
    </div>
  </div>
