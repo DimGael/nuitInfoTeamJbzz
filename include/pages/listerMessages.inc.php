@@ -29,7 +29,7 @@
 if(!empty($_SESSION['connexion'])){ ?>
 
   <form action="index.php?page=10&id=<?php echo $idEve; ?>" method="post">
-    <input type="textarea" id="message" name="message" />
+    <input type="textarea" id="message" name="message" maxlenght="1000" />
     <input type="submit" value="Envoyer"/>
   </form>
 
