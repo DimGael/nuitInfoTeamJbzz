@@ -35,9 +35,7 @@
         </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="../navbar-fixed-top/"><?= $infos->getPrenom() ?></a></li>
         <li><a href="./index.php?page=12">Deconnexion</a></li>
-
       </ul>
     </div><!--/.nav-collapse -->
   </div>
