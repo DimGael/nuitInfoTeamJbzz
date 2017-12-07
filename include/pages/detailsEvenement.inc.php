@@ -4,8 +4,6 @@
 		$evenementmanager = new EvenementManager($db);
 		$detailevenement = $evenementmanager->getUnEvenement($id);
 
-
-
 	?>
 
 
@@ -19,17 +17,17 @@
 			<th>Risque</th>
 		</tr>
 
-		<?php
-			foreach ($detailevenement as $evenement) {
-		?>
+
 				<tr>
-					<td> <?php echo $evenement->getTitre() ?> </td>
-					<td> <?php echo $evenement->getDescription() ?> </td>
-					<td> <?php echo $evenement->getLieu() ?> </td>
-					<td> <?php echo $evenement->getDate() ?> </td>
-					<td> <?php echo $evenement->getRisque() ?> </td>
+					<td> <?php echo $detailevenement->getTitre() ?> </td>
+					<td> <?php echo $detailevenement->getDescription() ?> </td>
+					<td> <?php echo $detailevenement->getLieu() ?> </td>
+					<td> <?php echo $detailevenement->getDate() ?> </td>
+					<td> <?php echo $detailevenement->getRisque() ?> </td>
 				</tr>
-		<?php
-			}
-		?>
+
 	</table>
+
+	<a href="./index.php?#"><center><button type="button" class="bouton bouton1">Participer</button></center></a>
+	<a href="./index.php?page=10&amp;id=<?php echo $id ?>"><center><button type="button" class="bouton bouton1">Messages</button></center></a>
+	<a href="./index.php?#"><center><button type="button" class="bouton bouton1">Participants</button></center></a>
