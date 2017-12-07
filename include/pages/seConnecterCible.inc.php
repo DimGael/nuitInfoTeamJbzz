@@ -6,6 +6,7 @@
 	$login = htmlspecialchars($_POST['login']);
 	$mdp = hashMdp($_POST['mdp']);
 	$infos = $compteManager->getComptePseudo($login);
+	
 	//On vérifie si le login existe dans la bdd
 	if(!empty($infos)){
 		if($mdp == $infos->getMdp()){
