@@ -1,6 +1,8 @@
 <?php
 
 class Compte{
+
+	private $id;
 	private $nom;
 	private $prenom;
 	private $pseudo;
@@ -15,6 +17,10 @@ class Compte{
 	public function hydrate($valeurs){
 		foreach ($valeurs as $attribut => $valeur) {
 			switch ($attribut) {
+				case 'uti_id':
+					$this->setId($valeur);
+					break;
+
 				case 'uti_nom':
 					$this->setNom($valeur);
 					break;
@@ -83,6 +89,15 @@ class Compte{
 
 	public function setEmail($email){
 		$this->email = $email;
+	}
+
+	//id
+	public function getId()){
+		return $this->id;
+	}
+
+	public function setId($id){
+		$this->id = $id;
 	}
 
 
