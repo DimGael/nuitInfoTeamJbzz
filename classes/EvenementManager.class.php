@@ -16,10 +16,10 @@ class EvenementManager{
 			return $req->execute(array(
 				'idUti' => $evenement->getIdUti(),
 				'titre' => $evenement->getTitre(),
-				'description' => $evenement->getDescription()
-				'risque' => $evenement->getRisque();
-        'lieu' => $evenement->getLieu();
-        'dateEve' => $evenement->getDate();
+				'description' => $evenement->getDescription(),
+				'risque' => $evenement->getRisque(),
+        		'lieu' => $evenement->getLieu(),
+        		'dateEve' => $evenement->getDate()
 			));
 		}
 
@@ -41,11 +41,11 @@ class EvenementManager{
 			return $listeEvenement;
     }
 
-    public function getUnEvenements($idEve){
+    public function getUnEvenement($idEve){
       $sql = "SELECT eve_id, uti_id, eve_titre, eve_description, eve_lieu, eve_date, eve_risque
       FROM evenement WHERE eve_id=".$idEve;
 
-      $requete = $this->db->prepare($sql);
+      		$requete = $this->db->prepare($sql);
 			$requete->execute();
 
 			while ($evenement = $requete->fetch(PDO::FETCH_OBJ)){

@@ -5,7 +5,7 @@ class Evenement{
 	private $idEve;
 	private $idUti;
 	private $titre;
-  private $description;
+ 	private $description;
 	private $date;
 	private $risque;
 	private $lieu;
@@ -96,7 +96,7 @@ class Evenement{
 	}
 
 	//risque
-	public function getRisque()){
+	public function getRisque(){
 		return $this->risque;
 	}
 
@@ -105,7 +105,7 @@ class Evenement{
 	}
 
   //lieu
-	public function getLieu()){
+	public function getLieu(){
 		return $this->lieu;
 	}
 

@@ -33,7 +33,7 @@
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="../navbar-fixed-top/"><?= $infos->getPrenom() ?></a></li>
-        <li><a href="./">Deconnexion</a></li>
+        <li><a href="./index.php?page=12">Deconnexion</a></li>
 
       </ul>
     </div><!--/.nav-collapse -->
@@ -71,9 +71,9 @@
            </li>
          </ul>
          <ul class="nav navbar-nav navbar-right">
-           <li><a href="../navbar/">On met des trucs à droite</a></li>
-           <!--<li><a href="./">Static top <span class="sr-only">(current)</span></a></li>
-           <li><a href="../navbar-fixed-top/">Fixed top</a></li>-->
+
+           <li><a href="./index.php?page=1">S'inscrire</a></li>
+           <li><a href="./index.php?page=3">Se connecter</a></li>
          </ul>
        </div><!--/.nav-collapse -->
      </div>

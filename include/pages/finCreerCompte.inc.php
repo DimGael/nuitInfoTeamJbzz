@@ -1,20 +1,18 @@
 <?php
 $pdo = new Mypdo();
 
-$mdp = htmlspecialchars($_POST['pwd']);
-$sel = "S3rD0cH3_L3_S3L";
-$mdp = $sel.$mdp;
-$mdp = hash('sha256', $mdp);
 
 $comptemanager = new CompteManager($pdo);
-$resultat = $comptemanager->getComptePseudo(htmlspecialchars($_POST['pseudo']));
-$resultat2 = $comptemanager->getCompteMail(htmlspecialchars($_POST['mail']));
-if(empty($resultat) && empty($resultat2)){
+
+$compteMemeLogin = $comptemanager->getComptePseudo(htmlspecialchars($_POST['pseudo']));
+$compteMemeEMail = $comptemanager->getCompteMail(htmlspecialchars($_POST['mail']));
+
+if(empty($compteMemeLogin) && empty($compteMemeEMail)){
 	$comptemanager->add(new Compte(array(
 		'uti_nom' => htmlspecialchars($_POST['nom']),
 		'uti_prenom' => htmlspecialchars($_POST['prenom']),
 		'uti_pseudo' => htmlspecialchars($_POST['pseudo']),
-		'uti_mdp' => $mdp,
+		'uti_mdp' => hashMdp(htmlspecialchars($_POST['pwd'])),
 		'uti_email' => htmlspecialchars($_POST['mail'])
 	)));
 
