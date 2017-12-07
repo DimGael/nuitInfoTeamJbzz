@@ -31,12 +31,12 @@ class MessagesManager{
 
 		$req = $this->db->prepare($sql);
 
-		$req->bindParam(':idEve', $id, PDO::PARAM_STR);
+		$req->bindParam(':idEve', $id);
 
 		$req->execute();
 
 		while ($libMessage = $req->fetch(PDO::FETCH_OBJ)) {
-			$message = new Messages($libMessage);
+			$message[] = new Messages($libMessage);
 		}
 
     $req->closeCursor();

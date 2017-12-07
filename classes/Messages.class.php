@@ -37,7 +37,7 @@ class Messages{
 					break;
 
         case 'uti_pseudo':
-  				$this->setMesDate($valeur);
+  				$this->setUtiPseudo($valeur);
   				break;
 			}
 		}
