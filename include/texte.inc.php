@@ -23,5 +23,12 @@ break;
 case 2 : include_once('pages/finCreerCompte.inc.php');
 break;
 
+case 3 : include_once('pages/seConnecter.inc.php');
+break;
+
+case 4 : include_once('pages/seConnecterCible.inc.php');
+break;
+
+
 ?>
 </div>
