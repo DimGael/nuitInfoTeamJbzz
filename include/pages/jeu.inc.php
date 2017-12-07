@@ -6,11 +6,11 @@
 if(!isset($_POST['joueur1']) && !isset($_SESSION['joueur1'])){ ?>
 
   <form action="index.php?page=5" method="post">
-    <label>Nom du premier Joueur : </label><input type="text" name="joueur1" placeholder="Joueur 1" required /></br>
-    <label>Nom du second Joueur : </label><input type="text" name="joueur2" placeholder="Joueur 2" required /></br>
-    <label>Nom du troisième Joueur : </label><input type="text" name="joueur3" placeholder="Joueur 3" required /></br>
-    <label>Nom du quatrième Joueur : </label><input type="text" name="joueur4" placeholder="Joueur 4" required /></br>
-    <label>Nom du cinquième Joueur : </label><input type="text" name="joueur5" placeholder="Joueur 5" required /></br>
+    <label>Nom du premier Joueur : </label><br><input type="text" name="joueur1" placeholder="Joueur 1" required /></br>
+    <label>Nom du second Joueur : </label><br><input type="text" name="joueur2" placeholder="Joueur 2" required /></br>
+    <label>Nom du troisième Joueur : </label><br><input type="text" name="joueur3" placeholder="Joueur 3" required /></br>
+    <label>Nom du quatrième Joueur : </label><br><input type="text" name="joueur4" placeholder="Joueur 4" required /></br>
+    <label>Nom du cinquième Joueur : </label><br><input type="text" name="joueur5" placeholder="Joueur 5" required /></br>
     <input type="submit" value="Valider !" />
   </form>
 
