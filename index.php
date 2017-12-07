@@ -4,6 +4,7 @@ require_once("include/config.inc.php");
 require_once("include/autoLoad.inc.php");
 require_once("include/header.inc.php");
 ?>
+
 <center><img src="./img/routeBan2.jpg" class="img-responsive"></center>
 <div class="debut">
 <div class="container">

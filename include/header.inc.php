@@ -29,7 +29,7 @@ session_start();
          </div>
          <div id="navbar" class="navbar-collapse collapse">
            <ul class="nav navbar-nav navbar-left">
-             <li class="active"><a href="./index.php">Accueil</a></li>
+             <li><a href="./index.php">Accueil</a></li>
              <li class="dropdown">
                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Prévention<span class="caret"></span></a>
                <ul class="dropdown-menu">
