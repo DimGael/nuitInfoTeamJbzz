@@ -18,7 +18,7 @@
             </td><td><?php echo $eve->getDate();?>
             </td><td><?php echo $eve->getRisque();?>
             </td><td><?php echo $eve->getLieu();?>
-						</td><td><a href="index.php?page=2&id=<?php echo $eve->getIdEve(); ?>"><img class="modifier" src="img/modifier.png" alt="Modifier la personne !" title="modifIcon"/></a></td>
+						</td><td><a href="index.php?page=2&id=<?php echo $eve->getIdEve(); ?>"><img class="modifier" src="img/modifier.png" alt="Acceder aux details de l'evenement !" title="modifIcon"/></a></td>
 
             </tr>
 					<?php } ?>
