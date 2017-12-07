@@ -32,8 +32,9 @@
         </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="./">Mon Compte</a></li>
         <li><a href="../navbar-fixed-top/"><?= $infos->getPrenom() ?></a></li>
+        <li><a href="./">Deconnexion</a></li>
+
       </ul>
     </div><!--/.nav-collapse -->
   </div>
