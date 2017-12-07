@@ -5,6 +5,7 @@ class Compte{
 	private $prenom;
 	private $pseudo;
 	private $mdp;
+	private $email;
 
 
 	public function __construct($valeurs){
@@ -15,19 +16,22 @@ class Compte{
 		foreach ($valeurs as $attribut => $valeur) {
 			switch ($attribut) {
 				case 'uti_nom':
-					$this->setNumero($valeur);
-					break;
-
-				case 'uti_prenom':
 					$this->setNom($valeur);
 					break;
 
-				case 'uti_pseudo':
+				case 'uti_prenom':
 					$this->setPrenom($valeur);
 					break;
 
+				case 'uti_pseudo':
+					$this->setPseudo($valeur);
+					break;
+
 				case 'uti_mdp':
-					$this->setTelephone($valeur);
+					$this->setMdp($valeur);
+					break;
+				case 'uti_email':
+					$this->setEmail($valeur);
 					break;
 			}
 		}
@@ -71,6 +75,16 @@ class Compte{
 	public function setMdp($mdp){
 		$this->mdp = $mdp;
 	}
+
+	//email
+	public function getEmail(){
+		return $this->email;
+	}
+
+	public function setEmail($email){
+		$this->email = $email;
+	}
+
 
 }
 
