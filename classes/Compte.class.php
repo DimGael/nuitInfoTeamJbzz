@@ -45,7 +45,7 @@ class Compte{
 
 
 	//prenom
-	public function getPreom(){
+	public function getPrenom(){
 		return $this->prenom;
 	}
 
@@ -71,8 +71,6 @@ class Compte{
 	public function setMdp($mdp){
 		$this->mdp = $mdp;
 	}
-
-
 
 }
 

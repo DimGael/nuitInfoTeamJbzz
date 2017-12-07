@@ -1,14 +1,15 @@
 <?php
 $pdo = new Mypdo();
 
-/*
-$votemanager = new VoteManager($pdo);
 
-$votemanager->add(new Vote(array(
-	'cit_num' => $_SESSION['cit'],
-	'per_num' => $_SESSION['numPersonneConnecte'],
-	'vot_valeur' => $_POST['vote']
-)));*/
+$comptemanager = new CompteManager($pdo);
+
+$comptemanager->add(new Vote(array(
+	'uti_nom' => $_POST['nom'],
+	'uti_prenom' => $_POST['prenom'],
+	'uti_pseudo' => $_POST['pseudo'],
+	'uti_mdp' => $_POST['mdp']
+)));
 ?>
 
 
