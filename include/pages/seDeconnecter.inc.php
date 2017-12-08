@@ -11,6 +11,7 @@
 		}
 
 		unset($_SESSION['connexion']);
+		session_destroy();
 	?>
 	<center><h1>Déconnexion</h1>
 	<p>

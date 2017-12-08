@@ -11,6 +11,7 @@
 		if($mdp == $infos->getMdp()){
 			echo "<center><h1>Vous êtes connecté !</h1></center>";
 			$_SESSION['connexion'] = $infos;
+			session_start();
 			header("Refresh:0;index.php?page=0");
 			exit();
 		}
