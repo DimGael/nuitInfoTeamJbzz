@@ -8,7 +8,7 @@
 		if(!$evenementManager->add(new Evenement(array(
 			'uti_id' => $_SESSION['connexion']->getId(),
 			'eve_titre' => $_SESSION['nouvEvenement']['nomEvenement'],
-			'eve_description' => $_POST['description'],
+			'eve_description' => htmlspecialchars($_POST['description']),
 			'eve_lieu' => $_SESSION['nouvEvenement']['lieuEvenement'],
 			'eve_risque' => 0,
 			'eve_date' => $_SESSION['nouvEvenement']['dateEvenement']." ".$_SESSION['nouvEvenement']['heure']

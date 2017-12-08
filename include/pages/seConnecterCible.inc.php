@@ -3,7 +3,7 @@
 	$compteManager = new CompteManager($pdo);
 	//Connexion
 	$login = htmlspecialchars($_POST['login']);
-	$mdp = hashMdp($_POST['mdp']);
+	$mdp = hashMdp(htmlspecialchars()$_POST['mdp']));
 	$infos = $compteManager->getComptePseudo($login);
 
 	//On vérifie si le login existe dans la bdd

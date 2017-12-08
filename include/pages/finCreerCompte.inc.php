@@ -3,7 +3,7 @@ $pdo = new Mypdo();
 
 
 $compteManager = new CompteManager($pdo);
-$login = $_POST['pseudo'];
+$login = htmlspecialchars($_POST['pseudo']);
 $compteMemeLogin = $compteManager->getComptePseudo($login);
 $compteMemeEMail = $compteManager->getCompteMail(htmlspecialchars($_POST['mail']));
 

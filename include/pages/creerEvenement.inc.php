@@ -7,16 +7,16 @@ if(isset($_POST['nomEvenement']))
 	$_SESSION['nouvEvenement'] = array('nomEvenement' => htmlspecialchars($_POST['nomEvenement']));
 
 if(isset($_POST['dateEvenement']))
-	$_SESSION['nouvEvenement']['dateEvenement'] = $_POST['dateEvenement'];
+	$_SESSION['nouvEvenement']['dateEvenement'] = htmlspecialchars($_POST['dateEvenement']);
 
 if(isset($_POST['nbParticipant']))
-	$_SESSION['nouvEvenement']['nbParticipant'] = $_POST['nbParticipant'];
+	$_SESSION['nouvEvenement']['nbParticipant'] = htmlspecialchars($_POST['nbParticipant']);
 
 if(isset($_POST['heure']))
-	$_SESSION['nouvEvenement']['heure'] = $_POST['heure'].":00";
+	$_SESSION['nouvEvenement']['heure'] = htmlspecialchars($_POST['heure'].":00");
 
 if(isset($_POST['lieuEvenement']))
-	$_SESSION['nouvEvenement']['lieuEvenement'] = $_POST['lieuEvenement'];
+	$_SESSION['nouvEvenement']['lieuEvenement'] = htmlspecialchars($_POST['lieuEvenement']);
 
 if(!isset($_SESSION['nouvEvenement']['nomEvenement'])){
 ?>
