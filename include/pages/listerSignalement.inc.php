@@ -1,6 +1,7 @@
 <?php
 		$pdo=new Mypdo();
     $SignalementManager = new SignalementManager($pdo);
+		$CompteManager = new CompteManager($pdo);
     $signalements = $SignalementManager->getAllSignalement();
 
 		?>
@@ -21,8 +22,9 @@
 					<?php
 					foreach ($signalements as $sig){?>
             <tr>
-							<td><?php echo $eve->getIdEve(); ?>'><?php echo $eve->getTitre();?>
-	            </td><td><?php echo $SignalementManager->getType($sig->getUti());?>
+							<td><?php echo $sig->getLibelle(); ?>
+	            </td><td><?php echo $SignalementManager->getType($sig->getSigId());?>
+							</td><td><?php echo $CompteManager->getCompteId($sig->getUti())->getPseudo();?>
 	            </td><td><?php echo $sig->getDate();?>
 	            </td><td><?php echo $sig->getRisque();?>
 	            </td><td><?php echo $sig->getLieu();?></td>
