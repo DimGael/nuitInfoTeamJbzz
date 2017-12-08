@@ -1,12 +1,12 @@
 <?php
 		$pdo=new Mypdo();
     $SignalementManager = new SignalementManager($pdo);
-    $signalements = $SignalementManager->getAllSignalements();
+    $signalements = $SignalementManager->getAllSignalement();
 
 		?>
     <center><h1>Liste des evenements enregistrés</h1></center>
 
-		<p>Actuellement <?php echo $signalements->getNbSignalements(); ?> signalements sont enregistrés</p>
+		<p>Actuellement <?php echo $SignalementManager->getNbSignalements(); ?> signalements sont enregistrés</p>
 				<br />
 
 				<form method="post" action="index.php?page=7">
@@ -17,20 +17,19 @@
 				<br />
 				<table class="table">
 
-					<tr><th>Titre</th><th>Organisateur</th><th>Date</th><th>Risque</th><th>Lieu</th></tr>
+					<tr><th>Intitulé</th><th>Signaleur</th><th>Date</th><th>Risque</th><th>Lieu</th></tr>
 					<?php
-					foreach ($evenements as $eve){?>
+					foreach ($signalements as $sig){?>
             <tr>
-							<td><a href='index.php?page=11&id=<?php echo $eve->getIdEve(); ?>'><?php echo $eve->getTitre();?></a>
-	            </td><td><?php echo $compteManager->getCompteId($eve->getIdUti())->getPseudo();?>
-	            </td><td><?php echo $eve->getDate();?>
-	            </td><td><?php echo $eve->getRisque();?>
-	            </td><td><?php echo $eve->getLieu();?></td>
+							<td><?php echo $eve->getIdEve(); ?>'><?php echo $eve->getTitre();?>
+	            </td><td><?php echo $SignalementManager->getType($sig->getUti());?>
+	            </td><td><?php echo $sig->getDate();?>
+	            </td><td><?php echo $sig->getRisque();?>
+	            </td><td><?php echo $sig->getLieu();?></td>
             </tr>
 					<?php } ?>
 					</table>
 					<br />
-?>
 
 	<br />
 	<div class="container">

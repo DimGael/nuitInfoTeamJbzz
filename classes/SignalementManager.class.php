@@ -38,6 +38,26 @@ class SignalementManager{
 			));
 	}
 
+	public function getType($idSignalement){
+			$sql = "SELECT typ_lib
+			FROM type t, signalement s
+			WHERE t.typ_id=s.typ_id AND sig_id=:id";
+
+			$req = $this->db->prepare($sql);
+
+			$req->bindValue(':id', $idSignalement);
+
+			$req->execute();
+
+			while ($listeLib = $req->fetch(PDO::FETCH_OBJ)) {
+				$lib = $listeLib->typ_lib;
+
+				return $lib;
+			}
+
+			return NULL;
+	}
+
 
 
 

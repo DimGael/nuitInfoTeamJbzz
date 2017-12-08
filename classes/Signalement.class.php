@@ -4,7 +4,7 @@ class Signalement{
 	private $libelle;
 	private $date;
 	private $idType;
-	private $idUti;
+	private $sigId;
 
 	public function __construct($valeurs){
 		$this->hydrate($valeurs);
@@ -53,20 +53,20 @@ class Signalement{
 
 	//libellé
 	public function getType(){
-		return $this->typ_id;
+		return $this->$idType;
 	}
 
-	public function setType($typ_id){
-		$this->typ_id = $typ_id;
+	public function setType($idType){
+		$this->$idType = $idType;
 	}
 
 	//libellé
-	public function getUti(){
-		return $this->idUti;
+	public function getSigId(){
+		return $this->sigId;
 	}
 
-	public function setUti($uti){
-		$this->idUti = $idUti;
+	public function setUti($sigId){
+		$this->sigId = $sigId;
 	}
 
 
