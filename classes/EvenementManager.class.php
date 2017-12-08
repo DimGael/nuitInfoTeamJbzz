@@ -8,7 +8,6 @@ class EvenementManager{
 	}
 
 	public function add($evenement){
-			var_dump($evenement);
 			$sql = "INSERT INTO evenement(uti_id,eve_titre,eve_description,eve_risque,eve_lieu,eve_date)
       VALUES (:idUti, :titre, :description, :risque, :lieu, :dateEve)";
 			$req = $this->db->prepare($sql);
