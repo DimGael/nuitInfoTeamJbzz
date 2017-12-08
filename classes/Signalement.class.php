@@ -71,7 +71,7 @@ class Signalement{
 	}
 
 	public function setType($idType){
-		$this->$idType = $idType;
+		$this->idType = $idType;
 	}
 
 	//libellé
@@ -80,7 +80,7 @@ class Signalement{
 	}
 
 	public function setUti($uti){
-		$this->idUti = $idUti;
+		$this->idUti = $uti;
 	}
 
 
