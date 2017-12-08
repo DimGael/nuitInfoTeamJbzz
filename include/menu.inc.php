@@ -31,7 +31,7 @@
           <ul class="dropdown-menu">
             <li><a href="./index.php?page=16">Gestes qui sauvent</a></li>
             <li><a href="./index.php?page=17">Numéros d'urgence</a></li>
-            <li><a href="#">Risques</a></li>
+            <li><a href="./index.php?page=18">Risques</a></li>
           </ul>
         </li>
         <li class="dropdown">

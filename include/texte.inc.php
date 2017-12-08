@@ -66,6 +66,8 @@ break;
 case 17 : include_once('pages/numerosAConnaitre.inc.php');
 break;
 
+case 18 : include_once('pages/risques.inc.php');
+break;
 
 case 404 : include_once('pages/error404.inc.php');
 break;
