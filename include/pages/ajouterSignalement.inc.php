@@ -4,13 +4,13 @@
 
 <form method="post" action="index.php?page=X">
   <div class="form-group">
-    Libelle : <input type="texte" name="nom" placeholder="Dupont" required="true" autofocus ="true" maxlenght="30">
+    Libelle : <input type="texte" name="lib" required="true" autofocus ="true" maxlenght="150">
   </div>
   <div class="form-group">
-    Date : <input type="texte" name="prenom" placeholder="Jean" required="true" maxlenght="30">
+    Date : <input type="date" name="date" required="true">
   </div>
   <div class="form-group">
-    Type de signalement : <input type="texte" name="pseudo" placeholder="jean123" required="true" maxlenght="30">
+    Type de signalement : <input type="number" name="type" required="true" min="1" max="2">
   </div>
 
   <button type="submit" class="btn btn-default">Envoyer</button>
