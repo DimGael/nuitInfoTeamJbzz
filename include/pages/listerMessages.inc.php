@@ -20,9 +20,7 @@
 
 				 if($MessagesManager->add($_POST['message'], $id, $idEve) == 1){
 						?>
-						<center><p>Insertion réussie !</p></center>
-
-					 <?php }else{ ?>
+						<?php }else{ ?>
 						 <p>Erreur !</p>
 					 <?php }
 					 }
