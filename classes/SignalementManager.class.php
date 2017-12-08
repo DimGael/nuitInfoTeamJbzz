@@ -27,12 +27,12 @@ class SignalementManager{
 	public function add($signalement){
 		var_dump($signalement);
 			$sql = "INSERT INTO signalement(sig_lib, sig_date, typ_id, uti_id)
-      VALUES (:libelle, :daate, :typeId, :utiId)";
+      VALUES (:libelle, :sig_date, :typeId, :utiId)";
 			$req = $this->db->prepare($sql);
 
 			return $req->execute(array(
 				'libelle' => $signalement->getLibelle(),
-				'daate' => $signalement->getDate(),
+				'sig_date' => $signalement->getDate(),
 				'typeId' => $signalement->getType(),
 				'utiId' => $signalement->getUti(),
 			));
