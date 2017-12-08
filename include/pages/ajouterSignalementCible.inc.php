@@ -11,7 +11,7 @@ if(!empty($id)){
 	$signalementManager->add(new Signalement(array(
 		'sig_lib' => htmlspecialchars($_POST['lib']),
 		'sig_date' => htmlspecialchars($_POST['date']),
-		'typ_id' => htmlspecialchars($_POST['number']),
+		'typ_id' => htmlspecialchars($_POST['type']),
 		'uti_id' => $id
 	)));
 
