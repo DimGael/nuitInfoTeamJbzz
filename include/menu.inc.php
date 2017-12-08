@@ -22,6 +22,8 @@
           <ul class="dropdown-menu">
             <li><a href="./index.php?page=6">Ajouter événement</a></li>
             <li><a href="./index.php?page=7">Lister événement</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="./index.php?page=5">Petit jeu</a></li>
           </ul>
         </li>
         <li class="dropdown">
