@@ -1,4 +1,4 @@
-<h1> Les gestes qui sauvent </h1>
+<center><h1> Les gestes qui sauvent </h1></center><br>
 
 
 <div id="carousel" class="carousel slide" data-ride="carousel">
