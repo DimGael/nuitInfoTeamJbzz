@@ -20,8 +20,8 @@ if(empty($compteMemeLogin) && empty($compteMemeEMail)){
 }
 else {
 	echo "<center><h1> Une erreur est survenue ! </h1>";
-	echo "<p> Vous allez être redirigé dans 2 secondes ! </p></center>";
-	header("Refresh:2,url='./index.php?page=0'");
+	echo "</center>";
+	header("Refresh:0,url='./index.php?page=0'");
 }
 
 ?>
