@@ -58,6 +58,19 @@ class SignalementManager{
 			return NULL;
 	}
 
+	public function getNbSignalements(){
+		$sql = "SELECT * FROM signalement";
+
+		$requete = $this->db->prepare($sql);
+		$requete->execute();
+
+		$requete->closeCursor();
+
+		$nbligne = $requete->rowCount();
+
+		return $nbligne;
+	}
+
 
 
 
