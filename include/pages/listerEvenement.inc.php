@@ -24,7 +24,8 @@ $pdo = new Mypdo();
 
 				<form method="post" action="index.php?page=7">
 					<input type="text" id="texteRecherche" name="texteRecherche" placeholder="maRecherche" value="<?=$txt?>">
-					<input type="submit" id="boutonRecherche" name="boutonRecherche" value="Rechercher">
+					<br><br>
+					<button type="submit" class="btn btn-default">Rechercher</button>
 				</form>
 
 				<br />

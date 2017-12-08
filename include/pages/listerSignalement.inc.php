@@ -17,14 +17,15 @@
 			$signalements = $SignalementManager->getAllSignalement();
 		}
 		?>
-    <center><h1>Liste des evenements enregistrés</h1></center>
+    <center><h1>Liste des evenements enregistrés</h1>
 
 		<p>Actuellement <?php echo $SignalementManager->getNbSignalements(); ?> signalements sont enregistrés</p>
 				<br />
 
 				<form method="post" action="index.php?page=19">
 					<input type="text" id="texteRecherche" name="texteRecherche" placeholder="maRecherche" value="<?=$txt?>">
-					<input type="submit" id="boutonRecherche" name="boutonRecherche" value="Rechercher">
+					<br><br>
+					<button type="submit" class="btn btn-default">Rechercher</button>
 				</form>
 
 				<br />
@@ -46,3 +47,4 @@
 	<br />
 </div>
 </div>
+</center>
