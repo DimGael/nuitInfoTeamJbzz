@@ -24,7 +24,7 @@ class SignalementManager{
 			return $listeSignalement;;
 	}
 
-	public function add(){
+	public function add($signalement){
 		var_dump($signalement);
 			$sql = "INSERT INTO signalement(sig_lib, sig_date, typ_id, uti_id)
       VALUES (:libelle, :daate, :typeId, :utiId)";

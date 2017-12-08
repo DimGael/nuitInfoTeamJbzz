@@ -1,6 +1,6 @@
 <?php
 
-class EvenementManager{
+class EvenementManager{ 
 	private $db;
 
 	public function __construct($db){
