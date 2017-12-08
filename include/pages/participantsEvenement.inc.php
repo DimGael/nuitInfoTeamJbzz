@@ -3,6 +3,8 @@
 			$pdo = new Mypdo();
       $CompteManager = new CompteManager($pdo);
       $ParticipeManager = new ParticipeManager($pdo);
+      $EvenementManager = new EvenementManager($pdo);
+      $libEvenement = $EvenementManager->getUnEvenement($_GET['id'])->getTitre();
       $participants = $ParticipeManager->getAllParticipants($idEve);
 				?>
 
@@ -12,8 +14,8 @@
 					<tr><th>Utilisateur</th><th>Evènement</th>
 					<?php
 					foreach ($participants as $participant){?>
-	            <tr><td><?php echo $participant->getUtiPseudo();?>
-	            </td><td><?php echo $participant->getEveNom();?>
+	            <tr><td><?php echo $participant->getPseudo();?>
+	            </td><td><?php echo $libEvenement;?>
               </td></tr>
 					<?php } ?>
 					</table>
