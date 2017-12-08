@@ -1,4 +1,4 @@
-<h1>Désigne ton SAM !</h1>
+<center><h1>Désigne ton SAM !</h1>
 
 <p>Fais ce jeu pour déterminer SAM !</p>
 
@@ -11,7 +11,8 @@ if(!isset($_POST['joueur1']) && !isset($_SESSION['joueur1'])){ ?>
     <label>Nom du troisième Joueur : </label><br><input type="text" name="joueur3" placeholder="Joueur 3" required /></br>
     <label>Nom du quatrième Joueur : </label><br><input type="text" name="joueur4" placeholder="Joueur 4" required /></br>
     <label>Nom du cinquième Joueur : </label><br><input type="text" name="joueur5" placeholder="Joueur 5" required /></br>
-    <input type="submit" value="Valider !" />
+    <br>
+    <button type="submit" class="btn btn-default">Envoyer</button>
   </form>
 
 <?php
@@ -131,3 +132,4 @@ $_SESSION['compteur']++;
 
         unset($_SESSION['defis']);
     } ?>
+</center>
