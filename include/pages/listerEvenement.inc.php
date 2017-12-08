@@ -16,7 +16,7 @@
 				</form>
 
 				<br />
-				<table class="table">
+				<table id="listerEvenements">
 
 					<tr><th>Titre</th><th>Organisateur</th><th>Date</th><th>Risque</th><th>Lieu</th></tr>
 					<?php
