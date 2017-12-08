@@ -4,10 +4,13 @@
 		$evenementmanager = new EvenementManager($db);
 		$CompteManager = new CompteManager($db);
 		$ParticipeManager = new ParticipeManager($db);
-		$detailevenement = $evenementmanager->getUnEvenement($id);
 
 		$infos = $CompteManager->getComptePseudo($_SESSION['connexion']->getPseudo());
-    $id = $infos->getId();
+	  $idPers = $infos->getId();
+
+		$detailevenement = $evenementmanager->getUnEvenement($id);
+		$participe = $ParticipeManager->getParticipe($idPers, $id);
+
 	?>
 
 
@@ -32,6 +35,8 @@
 
 	</table>
 
-	<a href="./index.php?page=14&amp;id=<?php echo $id ?>"><center><button type="button" class="bouton bouton1">Participer</button></center></a>
+	<?php if($participe == false){ ?>
+		<a href="./index.php?page=14&amp;id=<?php echo $id ?>"><center><button type="button" class="bouton bouton1">Participer</button></center></a>
+	<?php } ?>
 	<a href="./index.php?page=10&amp;id=<?php echo $id ?>"><center><button type="button" class="bouton bouton1">Messages</button></center></a>
-	<a href="./index.php?#"><center><button type="button" class="bouton bouton1">Participants</button></center></a>
+	<a href="./index.php?page=15&amp;id=<?php echo $id ?>"><center><button type="button" class="bouton bouton1">Participants</button></center></a>

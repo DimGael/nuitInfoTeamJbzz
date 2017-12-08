@@ -1,7 +1,7 @@
 </div>
   <footer class="footer">
-    <div class="container">
-      <p class="text-muted">Nuit de l'info - Team JBZZ - IUT du Limousin <img src="./img/logoLimoges.png" height="40px" width="112px" align="right"></p>
+    <div class="container imgfooter">
+      <p class="text-muted">Nuit de l'info<img src="./img/logoLimoges.png" height="40px"align="right"></p>
 
     </div>
 

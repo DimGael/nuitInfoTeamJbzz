@@ -10,7 +10,7 @@ class ParticipeManager{
 
   public function add($id, $idEve){
           $requete = $this->db->prepare(
-            'INSERT INTO participe (uti_id, eve_id) VALUES (:idPers, :eveId');
+            'INSERT INTO participe (uti_id, eve_id) VALUES (:idPers, :eveId)');
 
             $requete->bindValue(':eveId', $idEve);
             $requete->bindValue(':idPers', $id);
@@ -35,12 +35,37 @@ class ParticipeManager{
 		$req->execute();
 
 		while ($allParticipant = $req->fetch(PDO::FETCH_OBJ)) {
-			$participant[] = new Messages($allParticipant);
+			$participant[] = new Participe($allParticipant);
 		}
 
     $req->closeCursor();
 
 		return $participant;
+	}
+
+	public function getParticipe($idPers, $id){
+		$sql = "SELECT uti_pseudo, eve_titre FROM participe p
+            JOIN evenement e on p.uti_id=e.uti_id
+            JOIN utilisateur u on e.uti_id=u.uti_id
+            WHERE e.eve_id = :idEve AND
+						p.uti_id = :idPers";
+
+		$req = $this->db->prepare($sql);
+
+		$req->bindParam(':idPers', $idPers);
+		$req->bindParam(':idEve', $id);
+
+		$req->execute();
+
+		$nbLignes = $req->rowCount();
+
+    $req->closeCursor();
+
+		if($nbLignes == 0){
+			return false;
+		}else{
+			return true;
+		}
 	}
 }
 

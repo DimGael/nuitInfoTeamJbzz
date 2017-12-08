@@ -51,11 +51,11 @@ class Participe{
   }
 
   public function setEveNom($val){
-		$this->$eve_titre = $val;
+		$this->eve_titre = $val;
 	}
 
   public function getEveNom(){
-    return $this->$eve_titre;
+    return $this->eve_titre;
   }
 
   public function setUtiPseudo($val){

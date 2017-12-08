@@ -60,7 +60,8 @@ break;
 case 15 : include_once('pages/participantsEvenement.inc.php');
 break;
 
-
+case 16 : include_once('pages/gestesQuiSauvent.inc.php');
+break;
 
 
 case 404 : include_once('pages/error404.inc.php');

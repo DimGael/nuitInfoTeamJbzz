@@ -39,21 +39,32 @@
 }
 
 .debut{
-  margin-top: 50px;
+  margin-top: 80px;
 }
 
-label
 
-{
-
-    display: block;
-
-    width: 150px;
-
-    float: left;
-
+img{
+  margin-top:-10px;
+}
+.imageacc{
+  margin-top:-30px;
 }
 
-.borderless tr, .borderless td {
-    border: none;
+body{
+  background-color: #f2f2f2;
+}
+.row{
+  background-color: #white;
+  border-radius: 10px;
+}
+.navbar {
+
+background-color:#BDC3C7;
+
+}
+.footer{
+  background-color: #BDC3C7;
+}
+.imgfooter{
+  background-color: #BDC3C7;
 }
