@@ -10,7 +10,7 @@ class ParticipeManager{
 
   public function add($id, $idEve){
           $requete = $this->db->prepare(
-            'INSERT INTO participe (uti_id, eve_id) VALUES (:idPers, :eveId');
+            'INSERT INTO participe (uti_id, eve_id) VALUES (:idPers, :eveId)');
 
             $requete->bindValue(':eveId', $idEve);
             $requete->bindValue(':idPers', $id);
@@ -35,7 +35,7 @@ class ParticipeManager{
 		$req->execute();
 
 		while ($allParticipant = $req->fetch(PDO::FETCH_OBJ)) {
-			$participant[] = new Messages($allParticipant);
+			$participant[] = new Participe($allParticipant);
 		}
 
     $req->closeCursor();

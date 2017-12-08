@@ -3,11 +3,8 @@
 		$db = new Mypdo();
 		$evenementmanager = new EvenementManager($db);
 		$CompteManager = new CompteManager($db);
-		$ParticipeManager = new ParticipeManager($db);
-		$detailevenement = $evenementmanager->getUnEvenement($id);
 
-		$infos = $CompteManager->getComptePseudo($_SESSION['connexion']->getPseudo());
-    $id = $infos->getId();
+		$detailevenement = $evenementmanager->getUnEvenement($id);
 	?>
 
 
@@ -34,4 +31,4 @@
 
 	<a href="./index.php?page=14&amp;id=<?php echo $id ?>"><center><button type="button" class="bouton bouton1">Participer</button></center></a>
 	<a href="./index.php?page=10&amp;id=<?php echo $id ?>"><center><button type="button" class="bouton bouton1">Messages</button></center></a>
-	<a href="./index.php?#"><center><button type="button" class="bouton bouton1">Participants</button></center></a>
+	<a href="./index.php?page=15&amp;id=<?php echo $id ?>"><center><button type="button" class="bouton bouton1">Participants</button></center></a>
