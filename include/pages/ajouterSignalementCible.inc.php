@@ -4,6 +4,7 @@ $pdo = new Mypdo();
 
 $signalementManager = new SignalementManager($pdo);
 $id = $_SESSION['connexion']->getId();
+print $id;
 
 
 if(!empty($id)){
@@ -24,3 +25,4 @@ else {
 }
 
 ?>
+<h1> Evenement ajouté </h1>

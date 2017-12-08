@@ -2,7 +2,7 @@
   <div class="row">
     <center><h1> Ajouter un signalement </h1>
 
-<form method="post" action="index.php?page=X">
+<form method="post" action="index.php?page=21">
   <div class="form-group">
     Libelle : <input type="texte" name="lib" required="true" autofocus ="true" maxlenght="150">
   </div>
