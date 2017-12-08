@@ -13,9 +13,9 @@
 
 	?>
 
-
+<center>
 	<h1>Détail d'un événement</h1>
-	<table>
+	<table class="table">
 		<tr>
 			<th>Titre</th>
 			<th>Description</th>
@@ -33,8 +33,14 @@
 
 	</table>
 
+<table>
+<tr>
 	<?php if($participe == false){ ?>
-		<a href="./index.php?page=14&amp;id=<?php echo $id ?>"><center><button type="button" class="bouton bouton1">Participer</button></center></a>
+
+			<td><a href="./index.php?page=14&amp;id=<?php echo $id ?>"><center><button type="button" class="bouton bouton1">Participer</button></center></a></td>
 	<?php } ?>
-	<a href="./index.php?page=10&amp;id=<?php echo $id ?>"><center><button type="button" class="bouton bouton1">Messages</button></center></a>
-	<a href="./index.php?page=15&amp;id=<?php echo $id ?>"><center><button type="button" class="bouton bouton1">Participants</button></center></a>
+	<td><a href="./index.php?page=10&amp;id=<?php echo $id ?>"><center><button type="button" class="bouton bouton1">Messages</button></center></a></td>
+	<td><a href="./index.php?page=15&amp;id=<?php echo $id ?>"><center><button type="button" class="bouton bouton1">Participants</button></center></a></td>
+</tr>
+</table>
+</center>
