@@ -36,7 +36,9 @@
 		<div class="col-md-2 col-md-offset-3">
 		<a href="./index.php?page=14&amp;id=<?php echo $id ?>"><center><button type="button" class="bouton bouton1">Participer</button></center></a>
 	</div>
-	<?php } ?>
+<?php } else {
+	echo "<div class='col-md-2 col-md-offset-2'></div>";
+}?>
 	<div class="col-md-2">
 	<a href="./index.php?page=10&amp;id=<?php echo $id ?>"><center><button type="button" class="bouton bouton1">Messages</button></center></a>
 	</div>
