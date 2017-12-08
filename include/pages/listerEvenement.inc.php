@@ -1,17 +1,29 @@
 <?php
-			$pdo = new Mypdo();
-			$evenementManager = new EvenementManager($pdo);
-      $compteManager = new CompteManager($pdo);
-			$evenements = $evenementManager -> getAllEvenements();
-				?>
-<center>
-				<h1>Liste des evenements enregistrés</h1>
+$pdo = new Mypdo();
+	$evenementManager = new EvenementManager($pdo);
+	$compteManager = new CompteManager($pdo);
 
-				<p>Actuellement <?php echo $evenementManager->getNbEvenements(); ?> evenements sont enregistrés</p>
+	if(isset($_POST['texteRecherche'])){
+		$txt = $_POST['texteRecherche'];
+		if($txt!=''){
+			$evenements = $evenementManager -> rechercher($txt);
+		}else{
+			$evenements = $evenementManager -> getAllEvenements();
+		}
+
+	}else{
+		$txt='';
+		$evenements = $evenementManager -> getAllEvenements();
+	}
+	?>
+<center>
+		<h1>Liste des evenements enregistrés</h1>
+
+		<p>Actuellement <?php echo $evenementManager->getNbEvenements(); ?> evenements sont enregistrés</p>
 				<br />
-				<table class="table">
+
 				<form method="post" action="index.php?page=7">
-					<input type="text" id="texteRecherche" name="texteRecherche" placeholder="maRecherche">
+					<input type="text" id="texteRecherche" name="texteRecherche" placeholder="maRecherche" value="<?=$txt?>">
 					<input type="submit" id="boutonRecherche" name="boutonRecherche" value="Rechercher">
 				</form>
 
@@ -32,4 +44,4 @@
 					</table>
 					<br />
 					<p>Cliquez sur un evenement pour afficher ses details !</p>
-</center
+</center>
