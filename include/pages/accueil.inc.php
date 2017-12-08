@@ -1,4 +1,4 @@
-<center><img src="./img/routeBan2.jpg" class="img-responsive"></center>
+<center><img src="./img/routeBan2.jpg" class="img-responsive imageacc"></center>
 <div class="container">
   <div class="row">
     <div class="col-xs-12">
