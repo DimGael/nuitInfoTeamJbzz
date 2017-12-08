@@ -7,12 +7,7 @@
      <br>
      <?php if(!empty($_SESSION['connexion'])){
        ?>
-       <div class="col-md-4 col-md-offset-2">
-          <p> Coucou c'est moi lol </p>
-       </div>
-       <div class="col-md-4">
-          <p> Coucou c'est moi lol </p>
-       </div>
+       <p>Ce site web a été réalisé en une nuit par la team FRANCAISE nommée TEAM JBZZ. Youenn, Thomas, Gregory, Gaël, Quentin et Alexis vous offrent le meilleur d'eux même, enfin c'est ce qui était prévu à la base ... Titine et Simone nous ont rejoint peu après, un grand merci à elles ! </p>
        <?php
      }
      else {
