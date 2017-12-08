@@ -10,7 +10,7 @@
 			 <br>
 		 <center>
 			 <form action="./index.php?page=10&id=<?php echo $idEve; ?>" method="post">
-				 Message <input type="textarea" id="message" name="message" maxlenght="1000" />
+				 Message <input type="textarea" id="message" name="message" required="true" maxlenght="1000" />
 				 <button type="submit" class="btn btn-default">Envoyer</button>
 			 </form>
 		 </center>

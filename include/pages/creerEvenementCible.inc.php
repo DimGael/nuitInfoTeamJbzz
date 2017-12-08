@@ -13,17 +13,15 @@
 			'eve_risque' => 0,
 			'eve_date' => $_SESSION['nouvEvenement']['dateEvenement']." ".$_SESSION['nouvEvenement']['heure']
 		)))){
-			echo "Erreur lors de l'insertion";
-		}
-		else{
-			echo "Réussite de l'insertion !";
+			echo "<center><h1>Erreur lors de l'insertion</h1></center>";
 		}
 
 	?>
-		<h1>L'événement a bien été enregistré :)</h1>
+		<center><h1>L'événement a bien été enregistré :)</h1>
 		<p>
 			Vous allez être redirigé dans 2 secondes.
 		</p>
+	</center>
 	<?php
 
 		unset($_SESSION['nouvEvenement']);
