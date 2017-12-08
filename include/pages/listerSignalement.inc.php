@@ -6,7 +6,7 @@
 		?>
     <center><h1>Liste des evenements enregistrés</h1></center>
 
-		<p>Actuellement <?php echo $evenementManager->getNbSignalements(); ?> signalements sont enregistrés</p>
+		<p>Actuellement <?php echo $signalements->getNbSignalements(); ?> signalements sont enregistrés</p>
 				<br />
 
 				<form method="post" action="index.php?page=7">
