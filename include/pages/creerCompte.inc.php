@@ -1,4 +1,6 @@
-<center><h1> Creer un compte </h1>
+<div class="container">
+  <div class="row">
+    <center><h1> Creer un compte </h1>
 
 <form method="post" action="index.php?page=2">
   <div class="form-group">
@@ -19,4 +21,8 @@
 
 
   <button type="submit" class="btn btn-default">Envoyer</button>
+
 </form></center>
+<br>
+</div>
+</div>
