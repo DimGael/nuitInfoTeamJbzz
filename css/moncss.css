@@ -41,3 +41,15 @@
 .debut{
   margin-top: 50px;
 }
+
+label
+
+{
+
+    display: block;
+
+    width: 150px;
+
+    float: left;
+
+}
