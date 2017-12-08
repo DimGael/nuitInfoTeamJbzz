@@ -12,7 +12,7 @@
 		if($mdp == $infos->getMdp()){
 			echo "<center><h1>Vous êtes connecté !</h1></center>";
 			$_SESSION['connexion'] = $infos;
-			header("Refresh:2;index.php?page=0");
+			header("Refresh:0;index.php?page=0");
 			exit();
 		}
 		else {
