@@ -69,7 +69,7 @@ break;
 case 18 : include_once('pages/risques.inc.php');
 break;
 
-case 19 : include_once('pages/listerEvenement.inc.php');
+case 19 : include_once('pages/listerSignalement.inc.php');
 break;
 
 case 404 : include_once('pages/error404.inc.php');
