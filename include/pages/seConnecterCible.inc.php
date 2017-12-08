@@ -6,24 +6,24 @@
 	$login = htmlspecialchars($_POST['login']);
 	$mdp = hashMdp($_POST['mdp']);
 	$infos = $compteManager->getComptePseudo($login);
-	
+
 	//On vérifie si le login existe dans la bdd
 	if(!empty($infos)){
 		if($mdp == $infos->getMdp()){
-			echo "<h1>Vous êtes connecté !</h1>";
+			echo "<center><h1>Vous êtes connecté !</h1></center>";
 			$_SESSION['connexion'] = $infos;
 			header("Refresh:2;index.php?page=0");
 			exit();
 		}
 		else {
-			echo "<h1>Erreur !</h1>";
-			echo "<p> Le mot de passe entré est incorrect ! </p>";
+			echo "<center><h1>Erreur !</h1>";
+			echo "<p> Le mot de passe entré est incorrect ! </p></center>";
 			erreurConnexion();
 		}
 	}
 	else{
-		echo "<h1>Erreur !</h1>";
-		echo "<p> Le pseudo entré est incorrect ! </p>";
+		echo "<center><h1>Erreur !</h1>";
+		echo "<p> Le pseudo entré est incorrect ! </p></center>";
 		erreurConnexion();
 	}
 
