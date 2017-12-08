@@ -72,6 +72,9 @@ break;
 case 19 : include_once('pages/listerEvenement.inc.php');
 break;
 
+case 20 : include_once('pages/ajouterSignalement.inc.php');
+break;
+
 case 404 : include_once('pages/error404.inc.php');
 break;
 
