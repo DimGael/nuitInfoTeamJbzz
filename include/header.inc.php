@@ -16,5 +16,15 @@ session_start();
   <link href="css/moncss.css" rel="stylesheet">
 
      <?php require_once("include/menu.inc.php"); ?>
-     <body>
+
+
+     <body onkeydown="keyEvent(event)" onkeyup="metaKeyUp(event)">
+        <script src="js/konami.js" type="text/javascript" language="javascript"></script>
+
+
+
+
+
+
+
      <div class="debut">
