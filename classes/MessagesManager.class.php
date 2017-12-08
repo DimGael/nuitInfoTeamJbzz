@@ -20,7 +20,7 @@ class MessagesManager{
 
             return $retour;
   }
-
+ 
 	public function getAllMessages($id){
     $message = array();
 
