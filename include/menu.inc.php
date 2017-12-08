@@ -22,13 +22,15 @@
           <ul class="dropdown-menu">
             <li><a href="./index.php?page=6">Ajouter événement</a></li>
             <li><a href="./index.php?page=7">Lister événement</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="./index.php?page=5">Petit jeu</a></li>
           </ul>
         </li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Prévention<span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><a href="./index.php?page=16">Gestes qui sauvent</a></li>
-            <li><a href="#">Numéros d'urgence</a></li>
+            <li><a href="./index.php?page=17">Numéros d'urgence</a></li>
             <li><a href="#">Risques</a></li>
           </ul>
         </li>
