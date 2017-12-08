@@ -7,10 +7,12 @@
       $libEvenement = $EvenementManager->getUnEvenement($_GET['id'])->getTitre();
       $participants = $ParticipeManager->getAllParticipants($idEve);
 				?>
-
+<center>
+  <div class="container">
+    <div class="row">
 				<h1>Liste des participants</h1>
 
-				<table id="listerEvenements">
+				<table class="table">
 					<tr><th>Utilisateur</th><th>Evènement</th>
 					<?php
 					foreach ($participants as $participant){?>
@@ -20,3 +22,6 @@
 					<?php } ?>
 					</table>
 					<br />
+        </div>
+      </div>
+</center>
