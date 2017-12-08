@@ -2,21 +2,24 @@
 $pdo = new Mypdo();
 
 
-$comptemanager = new CompteManager($pdo);
-
-$compteMemeLogin = $comptemanager->getComptePseudo(htmlspecialchars($_POST['pseudo']));
-$compteMemeEMail = $comptemanager->getCompteMail(htmlspecialchars($_POST['mail']));
+$compteManager = new CompteManager($pdo);
+$login = $_POST['pseudo'];
+$compteMemeLogin = $compteManager->getComptePseudo($login);
+$compteMemeEMail = $compteManager->getCompteMail(htmlspecialchars($_POST['mail']));
 
 if(empty($compteMemeLogin) && empty($compteMemeEMail)){
-	$comptemanager->add(new Compte(array(
+	$compteManager->add(new Compte(array(
 		'uti_nom' => htmlspecialchars($_POST['nom']),
 		'uti_prenom' => htmlspecialchars($_POST['prenom']),
 		'uti_pseudo' => htmlspecialchars($_POST['pseudo']),
 		'uti_mdp' => hashMdp(htmlspecialchars($_POST['pwd'])),
 		'uti_email' => htmlspecialchars($_POST['mail'])
 	)));
+	$infos = $compteManager->getComptePseudo($login);
+	$_SESSION['connexion'] = $infos;
 
-	echo "<h1> Compte créé ! </h1>";
+	echo "<h1> Compte créé. Redirection automatique ! </h1>";
+	header("Refresh:2;index.php?page=0");
 }
 else {
 	echo "<center><h1> Une erreur est survenue ! </h1>";

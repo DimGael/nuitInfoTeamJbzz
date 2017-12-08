@@ -1,5 +1,4 @@
 <?php
-
 	$pdo = new Mypdo();
 	$compteManager = new CompteManager($pdo);
 	//Connexion
