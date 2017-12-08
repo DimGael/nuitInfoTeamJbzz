@@ -19,8 +19,10 @@ session_start();
 
 
      <body onkeydown="keyEvent(event)" onkeyup="metaKeyUp(event)">
-        <script src="js/konami.js" type="text/javascript" language="javascript"></script>
 
+       <script src="js/konami.js" type="text/javascript" language="javascript"></script>
+       <div id="jeu">
+       </div>
 
 
 
