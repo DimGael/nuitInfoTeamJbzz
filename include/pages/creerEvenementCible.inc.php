@@ -19,6 +19,13 @@
 			echo "Réussite de l'insertion !";
 		}
 
+	?>
+		<h1>L'événement a bien été enregistré :)</h1>
+		<p>
+			Vous allez être redirigé dans 2 secondes.
+		</p>
+	<?php
+
 		unset($_SESSION['nouvEvenement']);
 		header("Refresh:2, index.php?page=0");
 		exit();
