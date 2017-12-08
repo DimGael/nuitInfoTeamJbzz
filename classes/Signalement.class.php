@@ -67,7 +67,7 @@ class Signalement{
 
 	//libellé
 	public function getType(){
-		return $this->$idType;
+		return $this->idType;
 	}
 
 	public function setType($idType){

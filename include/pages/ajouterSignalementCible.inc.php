@@ -14,7 +14,7 @@ if(!empty($id)){
 		'uti_id' => $id
 	)));
 
-	echo "<h1> Compte créé. Redirection automatique ! </h1>";
+	echo "<h1> Evenement ajouté, redirection automatique !  </h1>";
 	header("Refresh:2;index.php?page=0");
 }
 else {
@@ -24,4 +24,3 @@ else {
 }
 
 ?>
-<h1> Evenement ajouté </h1>
