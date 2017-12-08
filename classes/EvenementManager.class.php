@@ -45,7 +45,7 @@ class EvenementManager{
       $sql = "SELECT eve_id, uti_id, eve_titre, eve_description, eve_lieu, eve_date, eve_risque
       FROM evenement WHERE eve_id=".$idEve;
 
-      		$requete = $this->db->prepare($sql);
+      $requete = $this->db->prepare($sql);
 			$requete->execute();
 
 			while ($evenement = $requete->fetch(PDO::FETCH_OBJ)){
@@ -68,6 +68,26 @@ class EvenementManager{
       $nbligne = $requete->rowCount();
 
       return $nbligne;
+    }
+
+		public function rechercher($txt){
+			$listeEvenement = array();
+
+      $sql = "SELECT eve_id, e.uti_id, eve_titre, eve_description, eve_lieu, eve_date, eve_risque
+			FROM evenement e, utilisateur u
+			WHERE e.uti_id=u.uti_id AND( eve_titre LIKE '%".$txt."%' or eve_description LIKE '%".$txt."%' or uti_pseudo LIKE '%".$txt."%')";
+
+      $requete = $this->db->prepare($sql);
+			$requete->bindValue(':txt', $txt);
+			$requete->execute();
+
+			while ($evenement = $requete->fetch(PDO::FETCH_OBJ)){
+				$listeEvenement[] = new Evenement($evenement);
+			}
+
+			$requete->closeCursor();
+
+			return $listeEvenement;
     }
 
 
