@@ -53,3 +53,7 @@ label
     float: left;
 
 }
+
+.borderless tr, .borderless td {
+    border: none;
+}
