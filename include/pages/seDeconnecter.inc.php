@@ -18,7 +18,7 @@
 		Redirection en cours ...
 	</p></center>
 	<?php
-		//header("Refresh:2,url='./index.php?page=0'");
+		header("Refresh:2,url='./index.php?page=0'");
 		exit();
 	?>
 </div>
