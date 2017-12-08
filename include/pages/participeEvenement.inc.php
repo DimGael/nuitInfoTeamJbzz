@@ -9,7 +9,7 @@
   $id = $infos->getId();
 
   if($ParticipeManager->add($id, $idEve) == 1){ ?>
-    <h1>Vous participez à l'évènement !</h1>
+    <center><h1>Vous participez à l'évènement !</h1></center>
   <?php
   header("refresh:2; url=index.php?page=10&id=$idEve");
 }else{ ?>

@@ -11,7 +11,7 @@
 		 <center>
 			 <form action="./index.php?page=10&id=<?php echo $idEve; ?>" method="post">
 				 Message <input type="textarea" id="message" name="message" maxlenght="1000" />
-				 <input type="submit" value="Envoyer"/>
+				 <button type="submit" class="btn btn-default">Envoyer</button>
 			 </form>
 		 </center>
 			 <?php if(isset($_POST['message'])){
