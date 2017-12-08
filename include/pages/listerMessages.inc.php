@@ -6,33 +6,41 @@
 		$messages = $MessagesManager->getAllMessages($idEve);
 ?>
 
-	<h1>Forum de l'évènement</h1><?php  ?>
+	<center><h1>Forum de l'événement</h1></center><?php  ?>
 	<br />
-
+	<div class="container">
+		<div class="row">
   <?php if($MessagesManager->getNbMessages($idEve) == 0){ ?>
     <p>Soyez le premier à commenter !</p>
   <?php }else{ ?>
-	<table id="listerMessages">
-	<tr><th>Message</th><th>Date</th><th>Par :</th>
+
 	<?php
 	foreach($messages as $message){
     ?>
+		<div class="col-md-3">
+			<?php echo $message->getUtiPseudo();?> :
 
-	   <tr><td><?php echo $message->getMesLib();?>
-		 </td><td><?php echo $message->getMesDate();?>
-     </td><td><?php echo $message->getUtiPseudo();?>
-		 </td></tr>
+		</div>
+		<div class="col-md-6">
+						<?php echo $message->getMesLib();?>
+
+		</div>
+		<div class="col-md-3">
+			<?php echo $message->getMesDate();?>
+		</div>
+		<br>
+
 	<?php } ?>
-	</table>
-	<br />
+
 <?php }
 if(!empty($_SESSION['connexion'])){ ?>
-
+	<br>
+<center>
   <form action="index.php?page=10&id=<?php echo $idEve; ?>" method="post">
-    <input type="textarea" id="message" name="message" maxlenght="1000" />
+    Message <input type="textarea" id="message" name="message" maxlenght="1000" />
     <input type="submit" value="Envoyer"/>
   </form>
-
+</center>
   <?php if(isset($_POST['message'])){
     $infos = $CompteManager->getComptePseudo($_SESSION['connexion']->getPseudo());
     $id = $infos->getId();
@@ -46,3 +54,5 @@ if(!empty($_SESSION['connexion'])){ ?>
       }
 }
   ?>
+</div>
+</div>

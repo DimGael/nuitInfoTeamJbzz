@@ -19,8 +19,8 @@ if(empty($compteMemeLogin) && empty($compteMemeEMail)){
 	echo "<h1> Compte créé ! </h1>";
 }
 else {
-	echo "<h1> Une erreur est survenue ! </h1>";
-	echo "<p> Vous allez être redirigé dans 2 secondes ! </p>";
+	echo "<center><h1> Une erreur est survenue ! </h1>";
+	echo "<p> Vous allez être redirigé dans 2 secondes ! </p></center>";
 	header("Refresh:2,url='./index.php?page=0'");
 }
 

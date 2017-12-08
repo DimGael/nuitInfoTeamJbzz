@@ -10,12 +10,11 @@ class MessagesManager{
 
   public function add($message, $id, $idEve){
           $requete = $this->db->prepare(
-            'INSERT INTO message (uti_id, eve_id, mes_lib, mes_date) VALUES (:idPers, :eveId, :Mess, :dateMes)');
+            'INSERT INTO message (uti_id, eve_id, mes_lib, mes_date) VALUES (:idPers, :eveId, :Mess, NOW())');
 
             $requete->bindValue(':eveId', $idEve);
             $requete->bindValue(':idPers', $id);
             $requete->bindValue(':Mess', $message);
-            $requete->bindValue(':dateMes', date("Y-m-d H:i:s"));
 
             $retour=$requete->execute();
 
