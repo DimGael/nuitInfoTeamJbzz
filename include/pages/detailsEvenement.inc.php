@@ -23,15 +23,13 @@
 			<th>Date</th>
 			<th>Risque</th>
 		</tr>
-
-
-				<tr>
-					<td> <?php echo $detailevenement->getTitre() ?> </td>
-					<td> <?php echo $detailevenement->getDescription() ?> </td>
-					<td> <?php echo $detailevenement->getLieu() ?> </td>
-					<td> <?php echo $detailevenement->getDate() ?> </td>
-					<td> <?php echo $detailevenement->getRisque() ?> </td>
-				</tr>
+		<tr>
+			<td> <?php echo $detailevenement->getTitre() ?> </td>
+			<td> <?php echo $detailevenement->getDescription() ?> </td>
+			<td> <?php echo $detailevenement->getLieu() ?> </td>
+			<td> <?php echo $detailevenement->getDate() ?> </td>
+			<td> <?php echo $detailevenement->getRisque() ?> </td>
+		</tr>
 
 	</table>
 
