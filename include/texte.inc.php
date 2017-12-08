@@ -54,7 +54,11 @@ break;
 case 13 : include_once('pages/creerEvenementCible.inc.php');
 break;
 
+case 14 : include_once('pages/participeEvenement.inc.php');
+break;
 
+case 15 : include_once('pages/participantsEvenement.inc.php');
+break;
 
 
 
