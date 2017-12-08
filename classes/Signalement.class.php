@@ -1,10 +1,11 @@
 <?php
 
 class Signalement{
+	private $sigId;
 	private $libelle;
 	private $date;
 	private $idType;
-	private $sigId;
+	private $idUti;
 
 	public function __construct($valeurs){
 		$this->hydrate($valeurs);
@@ -13,6 +14,10 @@ class Signalement{
 	public function hydrate($valeurs){
 		foreach ($valeurs as $attribut => $valeur) {
 			switch ($attribut) {
+				case 'sig_id':
+					$this->setId($valeur);
+					break;
+
 				case 'sig_lib':
 					$this->setLibelle($valeur);
 					break;
@@ -31,6 +36,15 @@ class Signalement{
 
 			}
 		}
+	}
+
+	//id signalement
+	public function getId(){
+		return $this->sigId;
+	}
+
+	public function setId($id){
+		$this->sigId = $id;
 	}
 
 	//libellé
@@ -61,12 +75,12 @@ class Signalement{
 	}
 
 	//libellé
-	public function getSigId(){
-		return $this->sigId;
+	public function getUti(){
+		return $this->idUti;
 	}
 
-	public function setUti($sigId){
-		$this->sigId = $sigId;
+	public function setUti($uti){
+		$this->idUti = $idUti;
 	}
 
 
