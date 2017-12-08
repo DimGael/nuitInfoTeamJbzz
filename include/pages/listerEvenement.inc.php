@@ -10,6 +10,14 @@
 				<p>Actuellement <?php echo $evenementManager->getNbEvenements(); ?> evenements sont enregistrés</p>
 				<br />
 				<table class="table">
+				<form method="post" action="index.php?page=7">
+					<input type="text" id="texteRecherche" name="texteRecherche" placeholder="maRecherche">
+					<input type="submit" id="boutonRecherche" name="boutonRecherche" value="Rechercher">
+				</form>
+
+				<br />
+				<table id="listerEvenements">
+
 					<tr><th>Titre</th><th>Organisateur</th><th>Date</th><th>Risque</th><th>Lieu</th></tr>
 					<?php
 					foreach ($evenements as $eve){?>
@@ -24,4 +32,4 @@
 					</table>
 					<br />
 					<p>Cliquez sur un evenement pour afficher ses details !</p>
-</center>
+</center
