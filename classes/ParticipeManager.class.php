@@ -9,15 +9,26 @@ class ParticipeManager{
 
 
   public function add($id, $idEve){
+			$req = $this->db->prepare("SELECT uti_id FROM participe WHERE uti_id=$id AND eve_id=$idEve");
+			$req->bindValue(':eveId', $idEve);
+			$req->bindValue(':idPers', $id);
+
+			$req->execute();
+
+			$retour1 = $req->fetch();
+			if(empty($retour1)){
           $requete = $this->db->prepare(
             'INSERT INTO participe (uti_id, eve_id) VALUES (:idPers, :eveId)');
 
             $requete->bindValue(':eveId', $idEve);
             $requete->bindValue(':idPers', $id);
 
-            $retour=$requete->execute();
+            $requete->execute();
+
+						$retour = $requete->fetch();
 
             return $retour;
+					}
   }
 
 	public function getAllParticipants($id){

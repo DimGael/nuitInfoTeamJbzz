@@ -13,5 +13,6 @@
   <?php
   header("refresh:2; url=index.php?page=10&id=$idEve");
 }else{ ?>
-    <p>Erreur, veuillez réessayer !</p>
+    <center><h1>Erreur, vous faites déjà parti de cet événement !</h1></center>
+    <?php header("refresh:2; url=index.php?page=11&id=$idEve"); ?>
   <?php } ?>
