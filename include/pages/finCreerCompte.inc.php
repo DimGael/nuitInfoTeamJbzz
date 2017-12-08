@@ -18,12 +18,11 @@ if(empty($compteMemeLogin) && empty($compteMemeEMail)){
 	$infos = $compteManager->getComptePseudo($login);
 	$_SESSION['connexion'] = $infos;
 
-	echo "<h1> Compte créé. Redirection automatique ! </h1>";
+	echo "<center><h1> Compte créé. Redirection automatique ! </h1></center>";
 	header("Refresh:2;index.php?page=0");
 }
 else {
-	echo "<center><h1> Une erreur est survenue ! </h1>";
-	echo "</center>";
+	echo "<center><h1> Une erreur est survenue ! </h1></center>";
 	header("Refresh:0,url='./index.php?page=0'");
 }
 

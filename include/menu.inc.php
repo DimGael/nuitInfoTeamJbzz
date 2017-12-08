@@ -37,8 +37,8 @@
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Signalement<span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="#">Lister signalements</a></li>
-            <li><a href="#">Ajouter signalement</a></li>
+            <li><a href="./index.php?page=19">Lister signalements</a></li>
+            <li><a href="./index.php?page=20">Ajouter signalement</a></li>
           </ul>
         </li>
       </ul>
