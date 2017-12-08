@@ -23,9 +23,7 @@ class ParticipeManager{
             $requete->bindValue(':eveId', $idEve);
             $requete->bindValue(':idPers', $id);
 
-            $requete->execute();
-
-						$retour = $requete->fetch();
+            $retour = $requete->execute();
 
             return $retour;
 					}
@@ -41,7 +39,7 @@ class ParticipeManager{
 
 		$req = $this->db->prepare($sql);
 
-		$req->bindParam(':idEve', $id);
+		$req->bindValue(':idEve', $id);
 
 		$req->execute();
 
@@ -55,16 +53,14 @@ class ParticipeManager{
 	}
 
 	public function getParticipe($idPers, $id){
-		$sql = "SELECT uti_pseudo, eve_titre FROM participe p
-            JOIN evenement e on p.uti_id=e.uti_id
-            JOIN utilisateur u on e.uti_id=u.uti_id
-            WHERE e.eve_id = :idEve AND
-						p.uti_id = :idPers";
+		$sql = "SELECT * FROM participe p
+            WHERE eve_id = :idEve AND
+						uti_id = :idPers";
 
 		$req = $this->db->prepare($sql);
 
-		$req->bindParam(':idPers', $idPers);
-		$req->bindParam(':idEve', $id);
+		$req->bindValue(':idPers', $idPers);
+		$req->bindValue(':idEve', $id);
 
 		$req->execute();
 

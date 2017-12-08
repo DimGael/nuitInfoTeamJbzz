@@ -4,7 +4,6 @@
 		$evenementmanager = new EvenementManager($db);
 		$CompteManager = new CompteManager($db);
 		$ParticipeManager = new ParticipeManager($db);
-
 		$infos = $CompteManager->getComptePseudo($_SESSION['connexion']->getPseudo());
 	  $idPers = $infos->getId();
 
